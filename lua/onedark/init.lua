@@ -184,7 +184,7 @@ local highlights = {
 
   -- typescript
 	{ hg = "typescriptTSType" , fg = colors.yellow },
-  { hg = "typescriptTSConstructor" , fg = colors.foreground},
+  { hg = "typescriptTSConstructor" , fg = colors.blue},
   { hg = "typescriptTSTypeBuiltin" , fg = colors.dark_yellow},
 
 -- JSON
