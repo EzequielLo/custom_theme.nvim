@@ -174,7 +174,7 @@ local highlights = {
   { hg ="htmlTitle", fg= colors.white },
 
 -- JavaScript
-  { hg ="javaScriptBraces", fg= colors.white },
+ -- { hg ="javaScriptBraces", fg= colors.white },
   { hg ="javaScriptFunction", fg= colors.purple },
   { hg ="javaScriptIdentifier", fg= colors.purple },
   { hg ="javaScriptNull", fg= colors.dark_yellow },
@@ -184,7 +184,7 @@ local highlights = {
 
   -- typescript
 	{ hg = "typescriptTSType" , fg = colors.yellow },
-  { hg = "typescriptTSConstructor" , fg = colors.foreground},
+  { hg = "typescriptTSConstructor" , fg = colors.yellow},
   { hg = "typescriptTSTypeBuiltin" , fg = colors.dark_yellow},
 
 -- JSON
@@ -243,7 +243,7 @@ local highlights = {
   { hg =  "TSConstructor" , fg = colors.yellow},
   --{ hg =  "TSError" , fg = colors.green},
   --{ hg =  "TSException" , fg = colors.cyan},
-  { hg =  "TSField" , fg = colors.foreground},
+  { hg =  "TSField" , fg = colors.yellow},
   --{ hg =  "TSFloat " , fg = colors.blue},
   { hg =  "TSFunction" , fg = colors.blue},
   { hg =  "TSFuncBuiltin" , fg = colors.yellow},
