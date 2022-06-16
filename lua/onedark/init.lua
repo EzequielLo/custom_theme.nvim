@@ -236,7 +236,7 @@ local highlights = {
   --{ hg =  "TSNote" , fg = colors.yellow},
   --{ hg =  "TSWarning" , fg = colors.bg, bg=colors.warning},
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
- -- { hg =  "TSConstant " , fg = colors.dark_yellow},
+  { hg =  "TSConstant " , fg = colors.dark_yellow},
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
   { hg =  "TSConstBuiltin" , fg = colors.dark_yellow, gui="bold"},
   --{ hg =  "TSConstMacro" , fg = colors.},
