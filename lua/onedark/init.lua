@@ -214,7 +214,7 @@ local highlights = {
   { hg =  'TSTextReference ', fg = colors.red},
 
   	--ts_rainbow
-	 { hg = 'rainbowcol1', fg = colors.special_grey, bg = colors.none },
+	 { hg = 'rainbowcol1', fg = colors.white, bg = colors.none },
 	 { hg = 'rainbowcol2', fg = colors.yellow, bg = colors.none },
 	 { hg = 'rainbowcol3', fg = colors.blue , bg = colors.none },
 	 { hg = 'rainbowcol4', fg = colors.orange, bg = colors.none },
