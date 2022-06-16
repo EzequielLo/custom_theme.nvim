@@ -227,7 +227,7 @@ local highlights = {
   { hg ="markdownUrl", fg= colors.cyan, gui= "underline", cterm= "underline" },
 
   -- Tree-sitter
-  --{ hg =  "TSAnnotation " , fg = colors.red},
+  { hg =  "TSAnnotation " , fg = colors.yellow},
   --{ hg =  "TSAttribute" , fg = colors.purple},
   --{ hg =  "TSBoolean " , fg = colors.dark_yellow},
   --{ hg =  "TSCharacter" , fg = colors.green},
