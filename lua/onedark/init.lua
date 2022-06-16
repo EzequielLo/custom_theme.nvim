@@ -188,6 +188,11 @@ local highlights = {
   { hg ="javaScriptRequire", fg= colors.cyan },
   { hg ="javaScriptReserved", fg= colors.purple },
 
+  -- typescript
+	{ hg = "typescriptTSType" , fg = colors.yellow },
+  { hg = "typescriptTSConstructor" , fg = colors.foreground},
+  { hg = "typescriptTSTypeBuiltin" , fg = colors.orange},
+
 -- JSON
   { hg ="jsonCommentError", fg= colors.white },
   { hg ="jsonKeyword", fg= colors.red },
