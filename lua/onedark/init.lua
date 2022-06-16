@@ -255,7 +255,7 @@ local highlights = {
   --{ hg =  "TSKeywordReturn" , fg = colors.magneta},
   --{ hg =  "TSLabel" , fg = colors.purple},
   --{ hg =  "TSMethod" , fg = colors.blue},
-  --{ hg =  "TSNamespace" , fg = colors.yellow},
+  { hg =  "TSNamespace" , fg = colors.yellow},
   --{ hg =  "TSNone" , fg = colors.green},
   --{ hg =  "TSNumber" , fg = colors.purple},
   --{ hg =  "TSOperator" , fg = colors.foreground},
