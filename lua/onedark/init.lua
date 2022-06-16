@@ -184,7 +184,7 @@ local highlights = {
 
   -- typescript
 	{ hg = "typescriptTSType" , fg = colors.yellow },
-  { hg = "typescriptTSConstructor" , fg = colors.red},
+  { hg = "typescriptTSConstructor" , fg = colors.yellow},
   { hg = "typescriptTSTypeBuiltin" , fg = colors.dark_yellow},
 
 -- JSON
@@ -238,8 +238,8 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
  -- { hg =  "TSConstant " , fg = colors.dark_yellow},
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
-  --{ hg =  "TSConstBuiltin" , fg = colors.purple},
-  --{ hg =  "TSConstMacro" , fg = colors.},
+  { hg =  "TSConstBuiltin" , fg = colors.purple},
+  { hg =  "TSConstMacro" , fg = colors.purple},
   --{ hg =  "TSConstructor" , fg = colors.yellow},
   --{ hg =  "TSError" , fg = colors.green},
   --{ hg =  "TSException" , fg = colors.cyan},
