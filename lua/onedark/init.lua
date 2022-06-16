@@ -278,13 +278,13 @@ local highlights = {
   --{ hg =  'TSTag', fg = colors.red},
   --{ hg =  'TSTagAttribute', fg = colors.red},
   --{ hg =  'TSPunctDelimiter', fg = colors.white},
-  --{ hg =  "TSTitle " , fg = colors.dark_yellow, gui="bold"},
-  --{ hg =  "TSLiteral ", fg = colors.green},
-  --{ hg =  'TSURI ', fg = colors.cyan},
+  { hg =  "TSTitle " , fg = colors.dark_yellow, gui="bold"},
+  { hg =  "TSLiteral ", fg = colors.green},
+  { hg =  'TSURI ', fg = colors.cyan},
   --{ hg =  'TSPunctSpecial', fg = colors.cyan},
   --{ hg =  'TSTagDelimiter', fg = colors.red},
   --{ hg =  'TSPunctBracket', fg = colors.white},
-  --{ hg =  'TSText', fg = colors.foreground},
+  { hg =  'TSText', fg = colors.foreground},
   --{ hg =  'TSTextReference ', fg = colors.red},
 
   --ts_rainbow
