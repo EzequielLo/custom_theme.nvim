@@ -243,7 +243,7 @@ local highlights = {
   { hg =  "TSConstructor" , fg = colors.yellow},
   --{ hg =  "TSError" , fg = colors.green},
   --{ hg =  "TSException" , fg = colors.cyan},
-  { hg =  "TSField" , fg = colors.foreground},
+  { hg =  "TSField" , fg = colors.yellow},
   --{ hg =  "TSFloat " , fg = colors.blue},
   { hg =  "TSFunction" , fg = colors.blue},
   { hg =  "TSFuncBuiltin" , fg = colors.yellow},
