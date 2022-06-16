@@ -233,7 +233,7 @@ local highlights = {
   --{ hg =  "TSCharacter" , fg = colors.green},
   --{ hg =  "TSComment" , fg = colors.green},
   --{ hg =  "SConditional" , fg = colors.green},
-  --{ hg =  "TSNote" , fg = colors.bg, bg=colors.info},
+  { hg =  "TSNote" , fg = colors.yellow},
   --{ hg =  "TSWarning" , fg = colors.bg, bg=colors.warning},
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
  -- { hg =  "TSConstant " , fg = colors.dark_yellow},
