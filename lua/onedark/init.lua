@@ -228,7 +228,7 @@ local highlights = {
 
   -- Tree-sitter
   { hg =  "TSAnnotation " , fg = colors.yellow},
-  --{ hg =  "TSAttribute" , fg = colors.purple},
+  { hg =  "TSAttribute" , fg = colors.yellow},
   --{ hg =  "TSBoolean " , fg = colors.dark_yellow},
   --{ hg =  "TSCharacter" , fg = colors.green},
   --{ hg =  "TSComment" , fg = colors.green},
@@ -242,7 +242,7 @@ local highlights = {
   --{ hg =  "TSConstMacro" , fg = colors.},
   { hg =  "TSConstructor" , fg = colors.red, gui="bold"},
   --{ hg =  "TSError" , fg = colors.green},
-  --{ hg =  "TSException" , fg = colors.cyan},
+  { hg =  "TSException" , fg = colors.cyan},
   --{ hg =  "TSField" , fg = colors.yellow},
   --{ hg =  "TSFloat " , fg = colors.blue},
   --{ hg =  "TSFunction" , fg = colors.blue},
