@@ -240,7 +240,7 @@ local highlights = {
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
   { hg =  "TSConstBuiltin" , fg = colors.purple},
   { hg =  "TSConstMacro" , fg = colors.purple},
-  --{ hg =  "TSConstructor" , fg = colors.yellow},
+  { hg =  "TSConstructor" , fg = colors.red},
   --{ hg =  "TSError" , fg = colors.green},
   --{ hg =  "TSException" , fg = colors.cyan},
   --{ hg =  "TSField" , fg = colors.yellow},
