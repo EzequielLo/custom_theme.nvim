@@ -39,7 +39,7 @@ local highlights = {
   { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
   { hg = 'Label', fg = colors.purple }, --case, default, etc.
   { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.dark_yellow }, --any other keyword
+  { hg = 'Keyword', fg = colors.red }, --any other keyword
   { hg = 'Exception', fg = colors.purple }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
   { hg = 'Include', fg = colors.blue }, --preprocessor #include
@@ -58,7 +58,7 @@ local highlights = {
   { hg = 'Debug' }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
-  { hg = 'Error', fg = colors.dark_yellow }, --any erroneous construct
+  { hg = 'Error', fg = colors.red }, --any erroneous construct
   { hg = 'Todo', fg = colors.purple }, --anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
@@ -70,9 +70,9 @@ local highlights = {
   { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.dark_yellow, fg = colors.black }, --diff mode: Deleted line
+  { hg = 'DiffDelete', bg = colors.red, fg = colors.black }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
-  { hg = 'ErrorMsg', fg = colors.dark_yellow }, --error messages on the command line
+  { hg = 'ErrorMsg', fg = colors.red }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.comment_grey }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
@@ -80,7 +80,7 @@ local highlights = {
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment_grey }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
   { hg = 'LineNr', fg = colors.gutter_fg_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-  { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paidark_yellow bracket, and its match.
+  { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
@@ -93,7 +93,7 @@ local highlights = {
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
   { hg = 'SpecialKey', fg = colors.special_grey }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
-  { hg = 'SpellBad', fg = colors.dark_yellow, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellBad', fg = colors.red, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
   { hg = 'SpellCap', fg = colors.dark_yellow }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
@@ -112,11 +112,11 @@ local highlights = {
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
-  { hg = 'DiagnosticError', fg = colors.dark_yellow },
+  { hg = 'DiagnosticError', fg = colors.red },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
   { hg = 'DiagnosticHint', fg = colors.cyan },
-  { hg = 'DiagnosticUnderlineError', fg = colors.dark_yellow, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.red, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
@@ -130,7 +130,7 @@ local highlights = {
   -- GitSings
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.dark_yellow },
+  { hg = 'GitSignsDelete', fg = colors.red },
 
 -- CSS
   { hg ="cssAttrComma",  fg=colors.purple },
@@ -151,26 +151,26 @@ local highlights = {
   { hg ="cssPseudoClassId", fg= colors.dark_yellow },
   { hg ="cssSelectorOp", fg= colors.purple },
   { hg ="cssSelectorOp2", fg= colors.purple },
-  { hg ="cssTagName", fg= colors.dark_yellow },
+  { hg ="cssTagName", fg= colors.red },
 
 -- HTML (keep consistent with Markdown, below)
   { hg ="htmlArg", fg= colors.dark_yellow },
   { hg ="htmlBold", fg= colors.dark_yellow, gui= "bold", cterm= "bold" },
   { hg ="htmlBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="htmlEndTag", fg= colors.white },
-  { hg ="htmlH1", fg= colors.dark_yellow },
-  { hg ="htmlH2", fg= colors.dark_yellow },
-  { hg ="htmlH3", fg= colors.dark_yellow },
-  { hg ="htmlH4", fg= colors.dark_yellow },
-  { hg ="htmlH5", fg= colors.dark_yellow },
-  { hg ="htmlH6", fg= colors.dark_yellow },
+  { hg ="htmlH1", fg= colors.red },
+  { hg ="htmlH2", fg= colors.red },
+  { hg ="htmlH3", fg= colors.red },
+  { hg ="htmlH4", fg= colors.red },
+  { hg ="htmlH5", fg= colors.red },
+  { hg ="htmlH6", fg= colors.red },
   { hg ="htmlItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="htmlLink", fg= colors.cyan, gui= "underline", cterm= "underline" },
   { hg ="htmlSpecialChar", fg= colors.dark_yellow },
-  { hg ="htmlSpecialTagName", fg= colors.dark_yellow },
+  { hg ="htmlSpecialTagName", fg= colors.red },
   { hg ="htmlTag", fg= colors.white },
-  { hg ="htmlTagN", fg= colors.dark_yellow },
-  { hg ="htmlTagName", fg= colors.dark_yellow },
+  { hg ="htmlTagN", fg= colors.red },
+  { hg ="htmlTagName", fg= colors.red },
   { hg ="htmlTitle", fg= colors.white },
 
 -- JavaScript
@@ -189,16 +189,16 @@ local highlights = {
 
 -- JSON
   { hg ="jsonCommentError", fg= colors.white },
-  { hg ="jsonKeyword", fg= colors.dark_yellow },
+  { hg ="jsonKeyword", fg= colors.red },
   { hg ="jsonBoolean", fg= colors.dark_yellow },
   { hg ="jsonNumber", fg= colors.dark_yellow },
   { hg ="jsonQuote", fg= colors.white },
-  { hg ="jsonMissingCommaError", fg= colors.dark_yellow, gui= "reverse" },
-  { hg ="jsonNoQuotesError", fg= colors.dark_yellow, gui= "reverse" },
-  { hg ="jsonNumError", fg= colors.dark_yellow, gui= "reverse" },
+  { hg ="jsonMissingCommaError", fg= colors.red, gui= "reverse" },
+  { hg ="jsonNoQuotesError", fg= colors.red, gui= "reverse" },
+  { hg ="jsonNumError", fg= colors.red, gui= "reverse" },
   { hg ="jsonString", fg= colors.green },
-  { hg ="jsonStringSQError", fg= colors.dark_yellow, gui= "reverse" },
-  { hg ="jsonSemicolonError", fg= colors.dark_yellow, gui= "reverse" },
+  { hg ="jsonStringSQError", fg= colors.red, gui= "reverse" },
+  { hg ="jsonSemicolonError", fg= colors.red, gui= "reverse" },
 
 -- Markdown (keep consistent with HTML, above)
   { hg ="markdownBlockquote", fg= colors.comment_grey },
@@ -207,13 +207,13 @@ local highlights = {
   { hg ="markdownCode", fg= colors.green },
   { hg ="markdownCodeBlock", fg= colors.green },
   { hg ="markdownCodeDelimiter", fg= colors.green },
-  { hg ="markdownH1", fg= colors.dark_yellow },
-  { hg ="markdownH2", fg= colors.dark_yellow },
-  { hg ="markdownH3", fg= colors.dark_yellow },
-  { hg ="markdownH4", fg= colors.dark_yellow },
-  { hg ="markdownH5", fg= colors.dark_yellow },
-  { hg ="markdownH6", fg= colors.dark_yellow },
-  { hg ="markdownHeadingDelimiter", fg= colors.dark_yellow },
+  { hg ="markdownH1", fg= colors.red },
+  { hg ="markdownH2", fg= colors.red },
+  { hg ="markdownH3", fg= colors.red },
+  { hg ="markdownH4", fg= colors.red },
+  { hg ="markdownH5", fg= colors.red },
+  { hg ="markdownH6", fg= colors.red },
+  { hg ="markdownHeadingDelimiter", fg= colors.red },
   { hg ="markdownHeadingRule", fg= colors.comment_grey },
   { hg ="markdownId", fg= colors.purple },
   { hg ="markdownIdDeclaration", fg= colors.blue },
@@ -221,13 +221,13 @@ local highlights = {
   { hg ="markdownItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="markdownLinkDelimiter", fg= colors.purple },
   { hg ="markdownLinkText", fg= colors.blue },
-  { hg ="markdownListMarker", fg= colors.dark_yellow },
-  { hg ="markdownOrderedListMarker", fg= colors.dark_yellow },
+  { hg ="markdownListMarker", fg= colors.red },
+  { hg ="markdownOrderedListMarker", fg= colors.red },
   { hg ="markdownRule", fg= colors.comment_grey },
   { hg ="markdownUrl", fg= colors.cyan, gui= "underline", cterm= "underline" },
 
   -- Tree-sitter
-  { hg =  "TSAnnotation " , fg = colors.dark_yellow},
+  { hg =  "TSAnnotation " , fg = colors.red},
   { hg =  "TSAttribute" , fg = colors.purple},
   --{ hg =  "TSBoolean " , fg = colors.dark_yellow},
   --{ hg =  "TSCharacter" , fg = colors.green},
@@ -259,10 +259,10 @@ local highlights = {
   --{ hg =  "TSNone" , fg = colors.green},
   --{ hg =  "TSNumber" , fg = colors.purple},
   --{ hg =  "TSOperator" , fg = colors.foreground},
-  { hg =  "TSParameter" , fg = colors.dark_yellow},
-  { hg =  "TSParameterReference" , fg = colors.dark_yellow},
+  { hg =  "TSParameter" , fg = colors.red},
+  { hg =  "TSParameterReference" , fg = colors.red},
   --{ hg =  "TSPreProc" , fg = colors.base00},
-  { hg =  "TSProperty" , fg = colors.dark_yellow},
+  { hg =  "TSProperty" , fg = colors.red},
   { hg =  "TSString" , fg = colors.green},
   { hg =  "TSStringRegex" , fg = colors.green},
   { hg =  "TSStringEscape" , fg = colors.cyan},
