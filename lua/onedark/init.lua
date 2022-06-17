@@ -29,9 +29,9 @@ local highlights = {
   { hg = 'Constant', fg = colors.cyan }, --any constant
   { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
---  { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
---  { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
---  { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
+  { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
+  { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
@@ -51,7 +51,7 @@ local highlights = {
   { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.yellow }, --A typedef
   { hg = 'Special', fg = colors.blue }, --any special symbol
-  --{ hg = 'SpecialChar', fg = colors.dark_yellow }, --special character in a constant
+  { hg = 'SpecialChar', fg = colors.cyan }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
   { hg = 'SpecialComment', fg = colors.comment_grey }, --special things inside a comment
