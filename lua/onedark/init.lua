@@ -29,10 +29,10 @@ local highlights = {
   { hg = 'Constant', fg = colors.cyan }, --any constant
   { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.dark_red }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.dark_red }, --a boolean constant: TRUE, false
+  { hg = 'Number', fg = colors.cyan }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.cyan }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.yellow }, --any variable name
+  { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
   { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
