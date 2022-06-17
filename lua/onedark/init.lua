@@ -262,7 +262,7 @@ local highlights = {
   --{ hg =  "TSParameter" , fg = colors.red},
   --{ hg =  "TSParameterReference" , fg = colors.red},
   --{ hg =  "TSPreProc" , fg = colors.base00},
-  --{ hg =  "TSProperty" , fg = colors.red},
+  { hg =  "TSProperty" , fg = colors.white},
   --{ hg =  "TSString" , fg = colors.green},
   --{ hg =  "TSStringRegex" , fg = colors.green},
   { hg =  "TSStringEscape" , fg = colors.yellow},
