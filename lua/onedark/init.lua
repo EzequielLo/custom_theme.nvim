@@ -29,10 +29,10 @@ local highlights = {
   { hg = 'Constant', fg = colors.cyan }, --any constant
   { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
+  { hg = 'Number', fg = colors.dark_red }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.dark_red }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
+  { hg = 'Identifier', fg = colors.yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
   { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
@@ -112,11 +112,11 @@ local highlights = {
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
-  { hg = 'DiagnosticError', fg = colors.red },
+  { hg = 'DiagnosticError', fg = colors.dark_red },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
   { hg = 'DiagnosticHint', fg = colors.cyan },
-  { hg = 'DiagnosticUnderlineError', fg = colors.red, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.dark_red, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
@@ -130,7 +130,7 @@ local highlights = {
   -- GitSings
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.red },
+  { hg = 'GitSignsDelete', fg = colors.dark_red },
 
 -- CSS
   { hg ="cssAttrComma",  fg=colors.purple },
@@ -151,26 +151,26 @@ local highlights = {
   { hg ="cssPseudoClassId", fg= colors.dark_yellow },
   { hg ="cssSelectorOp", fg= colors.purple },
   { hg ="cssSelectorOp2", fg= colors.purple },
-  { hg ="cssTagName", fg= colors.red },
+  { hg ="cssTagName", fg= colors.dark_red },
 
 -- HTML (keep consistent with Markdown, below)
   { hg ="htmlArg", fg= colors.dark_yellow },
   { hg ="htmlBold", fg= colors.dark_yellow, gui= "bold", cterm= "bold" },
   { hg ="htmlBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="htmlEndTag", fg= colors.white },
-  { hg ="htmlH1", fg= colors.red },
-  { hg ="htmlH2", fg= colors.red },
-  { hg ="htmlH3", fg= colors.red },
-  { hg ="htmlH4", fg= colors.red },
-  { hg ="htmlH5", fg= colors.red },
-  { hg ="htmlH6", fg= colors.red },
+  { hg ="htmlH1", fg= colors.dark_red },
+  { hg ="htmlH2", fg= colors.dark_red },
+  { hg ="htmlH3", fg= colors.dark_red },
+  { hg ="htmlH4", fg= colors.dark_red },
+  { hg ="htmlH5", fg= colors.dark_red },
+  { hg ="htmlH6", fg= colors.dark_red },
   { hg ="htmlItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="htmlLink", fg= colors.cyan, gui= "underline", cterm= "underline" },
   { hg ="htmlSpecialChar", fg= colors.dark_yellow },
-  { hg ="htmlSpecialTagName", fg= colors.red },
+  { hg ="htmlSpecialTagName", fg= colors.dark_red },
   { hg ="htmlTag", fg= colors.white },
-  { hg ="htmlTagN", fg= colors.red },
-  { hg ="htmlTagName", fg= colors.red },
+  { hg ="htmlTagN", fg= colors.dark_red },
+  { hg ="htmlTagName", fg= colors.dark_red },
   { hg ="htmlTitle", fg= colors.white },
 
 -- JavaScript
@@ -189,16 +189,16 @@ local highlights = {
 
 -- JSON
   { hg ="jsonCommentError", fg= colors.white },
-  { hg ="jsonKeyword", fg= colors.red },
+  { hg ="jsonKeyword", fg= colors.dark_red },
   { hg ="jsonBoolean", fg= colors.dark_yellow },
   { hg ="jsonNumber", fg= colors.dark_yellow },
   { hg ="jsonQuote", fg= colors.white },
-  { hg ="jsonMissingCommaError", fg= colors.red, gui= "reverse" },
-  { hg ="jsonNoQuotesError", fg= colors.red, gui= "reverse" },
-  { hg ="jsonNumError", fg= colors.red, gui= "reverse" },
+  { hg ="jsonMissingCommaError", fg= colors.dark_red, gui= "reverse" },
+  { hg ="jsonNoQuotesError", fg= colors.dark_red, gui= "reverse" },
+  { hg ="jsonNumError", fg= colors.dark_red, gui= "reverse" },
   { hg ="jsonString", fg= colors.green },
-  { hg ="jsonStringSQError", fg= colors.red, gui= "reverse" },
-  { hg ="jsonSemicolonError", fg= colors.red, gui= "reverse" },
+  { hg ="jsonStringSQError", fg= colors.dark_red, gui= "reverse" },
+  { hg ="jsonSemicolonError", fg= colors.dark_red, gui= "reverse" },
 
 -- Markdown (keep consistent with HTML, above)
   { hg ="markdownBlockquote", fg= colors.comment_grey },
@@ -207,13 +207,13 @@ local highlights = {
   { hg ="markdownCode", fg= colors.green },
   { hg ="markdownCodeBlock", fg= colors.green },
   { hg ="markdownCodeDelimiter", fg= colors.green },
-  { hg ="markdownH1", fg= colors.red },
-  { hg ="markdownH2", fg= colors.red },
-  { hg ="markdownH3", fg= colors.red },
-  { hg ="markdownH4", fg= colors.red },
-  { hg ="markdownH5", fg= colors.red },
-  { hg ="markdownH6", fg= colors.red },
-  { hg ="markdownHeadingDelimiter", fg= colors.red },
+  { hg ="markdownH1", fg= colors.dark_red },
+  { hg ="markdownH2", fg= colors.dark_red },
+  { hg ="markdownH3", fg= colors.dark_red },
+  { hg ="markdownH4", fg= colors.dark_red },
+  { hg ="markdownH5", fg= colors.dark_red },
+  { hg ="markdownH6", fg= colors.dark_red },
+  { hg ="markdownHeadingDelimiter", fg= colors.dark_red },
   { hg ="markdownHeadingRule", fg= colors.comment_grey },
   { hg ="markdownId", fg= colors.purple },
   { hg ="markdownIdDeclaration", fg= colors.blue },
@@ -221,8 +221,8 @@ local highlights = {
   { hg ="markdownItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="markdownLinkDelimiter", fg= colors.purple },
   { hg ="markdownLinkText", fg= colors.blue },
-  { hg ="markdownListMarker", fg= colors.red },
-  { hg ="markdownOrderedListMarker", fg= colors.red },
+  { hg ="markdownListMarker", fg= colors.dark_red },
+  { hg ="markdownOrderedListMarker", fg= colors.dark_red },
   { hg ="markdownRule", fg= colors.comment_grey },
   { hg ="markdownUrl", fg= colors.cyan, gui= "underline", cterm= "underline" },
 
