@@ -82,8 +82,8 @@ local highlights = {
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.color15, bg = colors.color20 }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
   { hg = 'LineNr', fg = colors.color20 }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-  { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-  { hg = 'MatchParen', fg = colors.color20, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
+  { hg = 'CursorLineNr', bg="colors.color19" }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+  { hg = 'MatchParen', fg = colors.color20,bg="colors.color19", gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.color20}, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
