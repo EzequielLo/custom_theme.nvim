@@ -88,9 +88,9 @@ local highlights = {
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.color20}, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.color0, bg = colors.color15 }, --normal text
-  { hg = 'Pmenu', fg = colors.color15, bg = colors.color19 }, --Popup menu: normal item.
-  { hg = 'PmenuSel', fg = colors.color15, bg = colors.color19}, --Popup menu: selected item.
-  { hg = 'PmenuSbar', bg = colors.color20 }, --Popup menu: scrollbar.
+  { hg = 'Pmenu', fg = colors.color15, bg = colors.color20 }, --Popup menu: normal item.
+  { hg = 'PmenuSel', fg = colors.color15, bg = colors.color20}, --Popup menu: selected item.
+  { hg = 'PmenuSbar', bg = colors.color19 }, --Popup menu: scrollbar.
   { hg = 'PmenuThumb', bg = colors.color20 }, --Popup menu: Thumb of the scrollbar.
   { hg = 'Question', fg = colors.color11 }, --hit-enter prompt and yes/no questions
  -- { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
