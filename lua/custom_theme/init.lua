@@ -22,7 +22,6 @@ local colors = {
   color19 = '#f0f0f0',
   color20 = '#505050',
   color21 = '#145c33',
-  color22 = '#863927',
 }
 
 
@@ -58,11 +57,11 @@ local highlights = {
   { hg = 'SpecialChar', fg = colors.color11 }, --special character in a constant
   { hg = 'Tag', fg = colors.color5 }, --you can use CTRL-] on this
   { hg = 'Delimiter', fg = colors.color0 }, --character that needs attention
-  { hg = 'SpecialComment', fg = colors.color22 }, --special things inside a comment
+  { hg = 'SpecialComment', fg = colors.color3 }, --special things inside a comment
   { hg = 'Debug', fg = colors.color17 }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
-  { hg = 'Error', fg = colors.color1 }, --any erroneous construct
+  { hg = 'Error', fg = colors.color3 }, --any erroneous construct
   { hg = 'Todo', fg = colors.color11 }, --anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
@@ -74,15 +73,15 @@ local highlights = {
   { hg = 'Directory', fg = colors.color14 }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.color14, fg = colors.color15 }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.color15, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.color1, fg = colors.color15 }, --diff mode: Deleted line
+  { hg = 'DiffDelete', bg = colors.color3, fg = colors.color15 }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.color19, fg = colors.color9 }, --diff mode: Changed text within a changed line
-  { hg = 'ErrorMsg', fg = colors.color1 }, --error messages on the command line
+  { hg = 'ErrorMsg', fg = colors.color3 }, --error messages on the command line
   { hg = 'VertSplit'}, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.color20 }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.color15, bg = colors.color20 }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
-  { hg = 'LineNr', fg = colors.color19 }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  { hg = 'LineNr', fg = colors.color20 }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
   { hg = 'MatchParen', fg = colors.color20, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
@@ -100,8 +99,8 @@ local highlights = {
   { hg = 'SpellBad', fg = colors.color15, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
   { hg = 'SpellCap', fg = colors.color15 }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal', fg = colors.color15 }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellRare', fg = colors.color1 }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-  { hg = 'StatusLine', fg = colors.color15, bg = colors.color1 }, --status line of current window
+  { hg = 'SpellRare', fg = colors.color3 }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+  { hg = 'StatusLine', fg = colors.color15, bg = colors.color3 }, --status line of current window
   { hg = 'StatusLineNC', fg = colors.color20 }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   { hg = 'StatusLineTerm', fg = colors.color20, bg = colors.color14 }, --status line of current :terminal window
   { hg = 'StatusLineTermNC', fg = colors.color14 }, --status line of non-current  =terminal window
@@ -120,7 +119,7 @@ local highlights = {
   { hg = 'DiagnosticWarn', fg = colors.color11 },
   { hg = 'DiagnosticInfo', fg = colors.color12 },
   { hg = 'DiagnosticHint', fg = colors.color14 },
-  { hg = 'DiagnosticUnderlineError', fg = colors.color1, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.color3, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.color11, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.color4, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.color14, gui = 'underline', cterm = 'underline' },
@@ -292,7 +291,7 @@ local highlights = {
   --{ hg =  'TSTextReference ', fg = colors.red},
 
   --ts_rainbow
-	 { hg = 'rainbowcol1', fg = colors.color15, bg = colors.none },
+	 { hg = 'rainbowcol1', fg = colors.color20, bg = colors.none },
 	 { hg = 'rainbowcol2', fg = colors.color11, bg = colors.none },
 	 { hg = 'rainbowcol3', fg = colors.color4 , bg = colors.none },
 	 { hg = 'rainbowcol4', fg = colors.color3, bg = colors.none },
