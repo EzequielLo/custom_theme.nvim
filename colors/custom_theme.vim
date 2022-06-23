@@ -1,1 +1,1 @@
-lua require('onedark').colorscheme()
+lua require('custom_theme').colorscheme()
