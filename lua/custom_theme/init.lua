@@ -2,6 +2,7 @@ local M = {}
 
 local colors = {
   magneta = '#A9A1E1',
+  magneta_bright = '#FFA8FF',
   red = '#E06C75',
   dark_red = '#BE5046',
   green = '#98C379',
@@ -36,12 +37,12 @@ local highlights = {
   { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
-  { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
-  { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
-  { hg = 'Label', fg = colors.purple }, --case, default, etc.
-  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  { hg = 'Conditional', fg = colors.magneta }, --if, then, else, endif, switch, etc.
+  { hg = 'Repeat', fg = colors.magneta }, --for, do, while, etc.
+  { hg = 'Label', fg = colors.magneta }, --case, default, etc.
+  { hg = 'Operator', fg = colors.magneta }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.purple }, --any other keyword
-  { hg = 'Exception', fg = colors.purple }, --try, catch, throw
+  { hg = 'Exception', fg = colors.magneta }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
   { hg = 'Include', fg = colors.blue }, --preprocessor #include
   { hg = 'Define', fg = colors.purple }, --preprocessor #define
@@ -274,7 +275,7 @@ local highlights = {
   { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
-  { hg =  "TSVariable" , fg = colors.magneta},
+  { hg =  "TSVariable" , fg = colors.magneta_bright},
   { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
