@@ -276,7 +276,7 @@ local highlights = {
   { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
-  { hg =  "TSVariable" , fg = colors.mauve},
+  { hg =  "TSVariable" , fg = colors.dark_yellow},
   { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
