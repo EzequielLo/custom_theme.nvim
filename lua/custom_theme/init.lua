@@ -31,9 +31,9 @@ local highlights = {
   { hg = 'Constant', fg = colors.cyan }, --any constant
   { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.magneta }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.magneta }, --a boolean constant: TRUE, false
-  { hg = 'Float', fg = colors.magneta }, --a floating point constant: 2.3e10
+  { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
+  { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
@@ -41,7 +41,7 @@ local highlights = {
   { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
   { hg = 'Label', fg = colors.purple }, --case, default, etc.
   { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.purple }, --any other keyword
+  { hg = 'Keyword', fg = colors.magneta }, --any other keyword
   { hg = 'Exception', fg = colors.purple }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
   { hg = 'Include', fg = colors.blue }, --preprocessor #include
@@ -240,15 +240,15 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
   { hg =  "TSConstant " , fg = colors.white},
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
-  { hg =  "TSConstBuiltin" , fg = colors.magneta, gui="bold"},
+  { hg =  "TSConstBuiltin" , fg = colors.magneta},
   { hg =  "TSConstMacro" , fg = colors.white},
-  { hg =  "TSConstructor" , fg = colors.white,gui="bold"},
+  { hg =  "TSConstructor" , fg = colors.white},
   --{ hg =  "TSError" , fg = colors.green},
   --{ hg =  "TSException" , fg = colors.cyan},
   { hg =  "TSField" , fg = colors.white},
   --{ hg =  "TSFloat " , fg = colors.blue},
   --{ hg =  "TSFunction" , fg = colors.blue},
-  { hg =  "TSFuncBuiltin" , fg = colors.magneta, gui="bold"},
+  { hg =  "TSFuncBuiltin" , fg = colors.magneta},
   --{ hg =  "TSFuncMacro" , fg = colors.blue},
   { hg =  "TSInclude " , fg = colors.purple},
   --{ hg =  "TSKeyword" , fg = colors.purple},
@@ -272,15 +272,15 @@ local highlights = {
   --{ hg =  "TSRepeat" , fg = colors},
   --{ hg =  "TSStorageClass" , fg = colors},
   --{ hg =  "TSType " , fg = colors.yellow},
-  { hg =  "TSTypeBuiltin " , fg = colors.yellow, gui ="bold"},
+  { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
   { hg =  "TSVariable" , fg = colors.magneta},
-  { hg =  "TSVariableBuiltin", fg = colors.yellow, gui="bold"},
+  { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
   --{ hg =  'TSPunctDelimiter', fg = colors.white},
-  { hg =  "TSTitle " , fg = colors.magneta, gui="bold"},
+  { hg =  "TSTitle " , fg = colors.magneta},
   { hg =  "TSLiteral ", fg = colors.green},
   { hg =  'TSURI ', fg = colors.cyan},
   --{ hg =  'TSPunctSpecial', fg = colors.cyan},
