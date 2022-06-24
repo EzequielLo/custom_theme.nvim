@@ -35,7 +35,7 @@ local highlights = {
   { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
   { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.maure }, --any variable name
+  { hg = 'Identifier', fg = colors.mauve }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
   { hg = 'Conditional', fg = colors.magneta }, --if, then, else, endif, switch, etc.
@@ -276,7 +276,7 @@ local highlights = {
   { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
-  { hg =  "TSVariable" , fg = colors.maure},
+  { hg =  "TSVariable" , fg = colors.mauve},
   { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
