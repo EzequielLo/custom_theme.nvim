@@ -1,6 +1,7 @@
 local M = {}
 
 local colors = {
+  magneta = '#A9A1E1',
   red = '#E06C75',
   dark_red = '#BE5046',
   green = '#98C379',
@@ -30,9 +31,9 @@ local highlights = {
   { hg = 'Constant', fg = colors.cyan }, --any constant
   { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.cyan }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.cyan }, --a boolean constant: TRUE, false
-  { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
+  { hg = 'Number', fg = colors.magneta }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.magneta }, --a boolean constant: TRUE, false
+  { hg = 'Float', fg = colors.magneta }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
   { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
@@ -40,7 +41,7 @@ local highlights = {
   { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
   { hg = 'Label', fg = colors.purple }, --case, default, etc.
   { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.purple }, --any other keyword
+  { hg = 'Keyword', fg = colors.dark_yellow }, --any other keyword
   { hg = 'Exception', fg = colors.purple }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
   { hg = 'Include', fg = colors.blue }, --preprocessor #include
@@ -52,14 +53,14 @@ local highlights = {
   { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.yellow }, --A typedef
   { hg = 'Special', fg = colors.blue }, --any special symbol
-  { hg = 'SpecialChar', fg = colors.cyan }, --special character in a constant
+  { hg = 'SpecialChar', fg = colors.magneta }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
   { hg = 'SpecialComment', fg = colors.comment_grey }, --special things inside a comment
   { hg = 'Debug' }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
-  { hg = 'Error', fg = colors.red }, --any erroneous construct
+  { hg = 'Error', fg = colors.dark_yellow }, --any erroneous construct
   { hg = 'Todo', fg = colors.purple }, --anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
@@ -71,9 +72,9 @@ local highlights = {
   { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.red, fg = colors.black }, --diff mode: Deleted line
+  { hg = 'DiffDelete', bg = colors.dark_yellow, fg = colors.black }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
-  { hg = 'ErrorMsg', fg = colors.red }, --error messages on the command line
+  { hg = 'ErrorMsg', fg = colors.dark_yellow }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.comment_grey }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
@@ -94,10 +95,10 @@ local highlights = {
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
   { hg = 'SpecialKey', fg = colors.special_grey }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
-  { hg = 'SpellBad', fg = colors.red, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellCap', fg = colors.dark_yellow }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellLocal', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+  { hg = 'SpellBad', fg = colors.dark_yellow, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellCap', fg = colors.magneta }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellLocal', fg = colors.magneta }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellRare', fg = colors.magneta }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
   { hg = 'StatusLine', fg = colors.white, bg = colors.cursor_grey }, --status line of current window
   { hg = 'StatusLineNC', fg = colors.comment_grey }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor_grey }, --status line of current :terminal window
@@ -113,11 +114,11 @@ local highlights = {
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
-  { hg = 'DiagnosticError', fg = colors.dark_red },
+  { hg = 'DiagnosticError', fg = colors.dark_yellow },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
   { hg = 'DiagnosticHint', fg = colors.cyan },
-  { hg = 'DiagnosticUnderlineError', fg = colors.dark_red, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.dark_yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
@@ -128,46 +129,46 @@ local highlights = {
   { hg = 'LspReferenceRead', fg = colors.blue, gui='underline' },
   { hg = 'LspSignatureActiveParameter', fg=colors.yellow, gui='bold' },
 
-  -- GitSings
+  -- ... an exception for my favorite plugin
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.dark_red },
+  { hg = 'GitSignsDelete', fg = colors.dark_yellow },
 
 -- CSS
-  { hg ="cssAttrComma",  fg=colors.purple },
-  { hg ="cssAttributeSelector", fg=colors.green },
-  { hg ="cssBraces", fg= colors.white },
-  { hg ="cssClassName", fg= colors.dark_yellow },
-  { hg ="cssClassNameDot", fg= colors.dark_yellow },
-  { hg ="cssDefinition", fg= colors.purple },
-  { hg ="cssFontAttr", fg= colors.dark_yellow },
-  { hg ="cssFontDescriptor", fg= colors.purple },
-  { hg ="cssFunctionName", fg= colors.blue },
-  { hg ="cssIdentifier", fg= colors.blue },
-  { hg ="cssImportant", fg= colors.purple },
+--  { hg ="cssAttrComma",  fg=colors.purple },
+--  { hg ="cssAttributeSelector", fg=colors.green },
+--  { hg ="cssBraces", fg= colors.white },
+--  { hg ="cssClassName", fg= colors.magneta },
+--  { hg ="cssClassNameDot", fg= colors.magneta },
+--  { hg ="cssDefinition", fg= colors.purple },
+--  { hg ="cssFontAttr", fg= colors.magneta },
+--  { hg ="cssFontDescriptor", fg= colors.purple },
+--  { hg ="cssFunctionName", fg= colors.blue },
+--  { hg ="cssIdentifier", fg= colors.blue },
+--  { hg ="cssImportant", fg= colors.purple },
   { hg ="cssInclude", fg= colors.white },
   { hg ="cssIncludeKeyword", fg= colors.purple },
-  { hg ="cssMediaType", fg= colors.dark_yellow },
+  { hg ="cssMediaType", fg= colors.magneta },
   { hg ="cssProp", fg= colors.white },
-  { hg ="cssPseudoClassId", fg= colors.dark_yellow },
+  { hg ="cssPseudoClassId", fg= colors.magneta },
   { hg ="cssSelectorOp", fg= colors.purple },
   { hg ="cssSelectorOp2", fg= colors.purple },
   { hg ="cssTagName", fg= colors.dark_red },
 
 -- HTML (keep consistent with Markdown, below)
-  { hg ="htmlArg", fg= colors.dark_yellow },
-  { hg ="htmlBold", fg= colors.dark_yellow, gui= "bold", cterm= "bold" },
+  { hg ="htmlArg", fg= colors.magneta },
+  { hg ="htmlBold", fg= colors.magneta, gui= "bold", cterm= "bold" },
   { hg ="htmlBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="htmlEndTag", fg= colors.white },
-  { hg ="htmlH1", fg= colors.dark_red },
-  { hg ="htmlH2", fg= colors.dark_red },
-  { hg ="htmlH3", fg= colors.dark_red },
-  { hg ="htmlH4", fg= colors.dark_red },
-  { hg ="htmlH5", fg= colors.dark_red },
-  { hg ="htmlH6", fg= colors.dark_red },
+  { hg ="htmlH1", fg= colors.dark_dark_yellow },
+  { hg ="htmlH2", fg= colors.dark_dark_yellow },
+  { hg ="htmlH3", fg= colors.dark_dark_yellow },
+  { hg ="htmlH4", fg= colors.dark_dark_yellow },
+  { hg ="htmlH5", fg= colors.dark_dark_yellow },
+  { hg ="htmlH6", fg= colors.dark_dark_yellow },
   { hg ="htmlItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="htmlLink", fg= colors.cyan, gui= "underline", cterm= "underline" },
-  { hg ="htmlSpecialChar", fg= colors.dark_yellow },
+  { hg ="htmlSpecialChar", fg= colors.magneta },
   { hg ="htmlSpecialTagName", fg= colors.dark_red },
   { hg ="htmlTag", fg= colors.white },
   { hg ="htmlTagN", fg= colors.dark_red },
@@ -178,21 +179,21 @@ local highlights = {
  -- { hg ="javaScriptBraces", fg= colors.white },
   --{ hg ="javaScriptFunction", fg= colors.purple },
   --{ hg ="javaScriptIdentifier", fg= colors.purple },
-  --{ hg ="javaScriptNull", fg= colors.dark_yellow },
-  --{ hg ="javaScriptNumber", fg= colors.dark_yellow },
+  --{ hg ="javaScriptNull", fg= colors.magneta },
+  --{ hg ="javaScriptNumber", fg= colors.magneta },
   --{ hg ="javaScriptRequire", fg= colors.cyan },
   --{ hg ="javaScriptReserved", fg= colors.purple },
 
   -- typescript
 	--{ hg = "typescriptTSType" , fg = colors.yellow },
   --{ hg = "typescriptTSConstructor" , fg = colors.yellow},
-  --{ hg = "typescriptTSTypeBuiltin" , fg = colors.dark_yellow},
+  --{ hg = "typescriptTSTypeBuiltin" , fg = colors.magneta},
 
 -- JSON
   { hg ="jsonCommentError", fg= colors.white },
   { hg ="jsonKeyword", fg= colors.dark_red },
-  { hg ="jsonBoolean", fg= colors.dark_yellow },
-  { hg ="jsonNumber", fg= colors.dark_yellow },
+  { hg ="jsonBoolean", fg= colors.magneta },
+  { hg ="jsonNumber", fg= colors.magneta },
   { hg ="jsonQuote", fg= colors.white },
   { hg ="jsonMissingCommaError", fg= colors.dark_red, gui= "reverse" },
   { hg ="jsonNoQuotesError", fg= colors.dark_red, gui= "reverse" },
@@ -203,7 +204,7 @@ local highlights = {
 
 -- Markdown (keep consistent with HTML, above)
   { hg ="markdownBlockquote", fg= colors.comment_grey },
-  { hg ="markdownBold", fg= colors.dark_yellow, gui= "bold", cterm= "bold" },
+  { hg ="markdownBold", fg= colors.magneta, gui= "bold", cterm= "bold" },
   { hg ="markdownBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="markdownCode", fg= colors.green },
   { hg ="markdownCodeBlock", fg= colors.green },
@@ -228,9 +229,9 @@ local highlights = {
   { hg ="markdownUrl", fg= colors.cyan, gui= "underline", cterm= "underline" },
 
   -- Tree-sitter
-  --{ hg =  "TSAnnotation " , fg = colors.red},
+  --{ hg =  "TSAnnotation " , fg = colors.dark_yellow},
   --{ hg =  "TSAttribute" , fg = colors.purple},
-  --{ hg =  "TSBoolean " , fg = colors.dark_yellow},
+  --{ hg =  "TSBoolean " , fg = colors.magneta},
   --{ hg =  "TSCharacter" , fg = colors.green},
   --{ hg =  "TSComment" , fg = colors.green},
   --{ hg =  "SConditional" , fg = colors.green},
@@ -239,7 +240,7 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
   { hg =  "TSConstant " , fg = colors.white},
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
-  { hg =  "TSConstBuiltin" , fg = colors.dark_yellow, gui="bold"},
+  { hg =  "TSConstBuiltin" , fg = colors.magneta, gui="bold"},
   { hg =  "TSConstMacro" , fg = colors.white},
   { hg =  "TSConstructor" , fg = colors.white,gui="bold"},
   --{ hg =  "TSError" , fg = colors.green},
@@ -247,7 +248,7 @@ local highlights = {
   { hg =  "TSField" , fg = colors.white},
   --{ hg =  "TSFloat " , fg = colors.blue},
   --{ hg =  "TSFunction" , fg = colors.blue},
-  { hg =  "TSFuncBuiltin" , fg = colors.dark_yellow, gui="bold"},
+  { hg =  "TSFuncBuiltin" , fg = colors.magneta, gui="bold"},
   --{ hg =  "TSFuncMacro" , fg = colors.blue},
   { hg =  "TSInclude " , fg = colors.purple},
   --{ hg =  "TSKeyword" , fg = colors.purple},
@@ -261,7 +262,7 @@ local highlights = {
   --{ hg =  "TSNumber" , fg = colors.purple},
   --{ hg =  "TSOperator" , fg = colors.foreground},
   { hg =  "TSParameter" , fg = colors.white},
-  --{ hg =  "TSParameterReference" , fg = colors.red},
+  --{ hg =  "TSParameterReference" , fg = colors.dark_yellow},
   --{ hg =  "TSPreProc" , fg = colors.base00},
   --{ hg =  "TSProperty" , fg = colors.white},
   --{ hg =  "TSString" , fg = colors.green},
@@ -271,28 +272,28 @@ local highlights = {
   --{ hg =  "TSRepeat" , fg = colors},
   --{ hg =  "TSStorageClass" , fg = colors},
   --{ hg =  "TSType " , fg = colors.yellow},
-  { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow, gui ="bold"},
+  { hg =  "TSTypeBuiltin " , fg = colors.magneta, gui ="bold"},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
   { hg =  "TSVariable" , fg = colors.white},
   { hg =  "TSVariableBuiltin", fg = colors.yellow, gui="bold"},
-  --{ hg =  'TSTag', fg = colors.red},
-  --{ hg =  'TSTagAttribute', fg = colors.red},
+  --{ hg =  'TSTag', fg = colors.dark_yellow},
+  --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
   --{ hg =  'TSPunctDelimiter', fg = colors.white},
-  { hg =  "TSTitle " , fg = colors.dark_yellow, gui="bold"},
+  { hg =  "TSTitle " , fg = colors.magneta, gui="bold"},
   { hg =  "TSLiteral ", fg = colors.green},
   { hg =  'TSURI ', fg = colors.cyan},
   --{ hg =  'TSPunctSpecial', fg = colors.cyan},
-  --{ hg =  'TSTagDelimiter', fg = colors.red},
+  --{ hg =  'TSTagDelimiter', fg = colors.dark_yellow},
   --{ hg =  'TSPunctBracket', fg = colors.white},
   { hg =  'TSText', fg = colors.foreground},
-  --{ hg =  'TSTextReference ', fg = colors.red},
+  --{ hg =  'TSTextReference ', fg = colors.dark_yellow},
 
   --ts_rainbow
 	 { hg = 'rainbowcol1', fg = colors.white, bg = colors.none },
 	 { hg = 'rainbowcol2', fg = colors.yellow, bg = colors.none },
 	 { hg = 'rainbowcol3', fg = colors.blue , bg = colors.none },
-	 { hg = 'rainbowcol4', fg = colors.dark_yellow, bg = colors.none },
+	 { hg = 'rainbowcol4', fg = colors.magneta, bg = colors.none },
 	 { hg = 'rainbowcol5', fg = colors.purple, bg = colors.none },
 	 { hg = 'rainbowcol6', fg = colors.green, bg = colors.none },
 	 { hg = 'rainbowcol7', fg = colors.cyan, bg = colors.none },
