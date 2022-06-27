@@ -1,25 +1,31 @@
 local M = {}
 
 local colors = {
-  red = '#E06C75',
-  dark_red = '#BE5046',
-  green = '#98C379',
-  yellow = '#E5C07B',
-  dark_yellow = '#D19A66',
-  blue = '#61AFEF',
-  purple = '#C678DD',
-  cyan = '#56B6C2',
-  white = '#ABB2BF',
-  black = '#282C34',
-  foreground = '#ABB2BF',
-  background = '#282C34',
-  comment_grey = '#5C6370',
-  gutter_fg_grey = '#4B5263',
-  cursor_grey = '#2C323C',
-  visual_grey = '#3E4452',
-  menu_grey = '#3E4452',
-  special_grey = '#3B4048',
-  vertsplit = '#3E4452',
+background: "#FBFBFB" # light background colour
+foreground: "#403f53" # default text colour
+cursor: "#90A7B2"
+constant: "#4876d6"
+number: "#aa0982"
+boolean: "#bc5454"
+comment: "#939dbb"
+cursorline: "#F0F0F0"
+# term colours
+black: "#403f53"
+darkRed: "#288ed7"
+darkGreen: "#2AA298"
+brown: "#08916a"
+darkBlue: "#d6438a"
+darkMagenta: "#de3d3b"
+darkCyan: "#F0F0F0"
+lightGrey: "#E0AF02"
+darkGrey: "#403f53"
+red: "#FF0000"
+green: "#00FF00"
+yellow: "#de3d3b"
+blue: "#0000FF"
+magenta: "#FF0000"
+cyan: "#0000FF"
+white: "#FFFFFF",
 }
 
 
