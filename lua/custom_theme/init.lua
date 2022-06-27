@@ -2,7 +2,7 @@ local M = {}
 
 local colors = {
   magneta = '#A9A1E1',
-  magneta_bright = '#d55fde',
+  magneta_bright = '#FFA8FF',
   red = '#E06C75',
   dark_red = '#BE5046',
   green = '#98C379',
@@ -275,7 +275,7 @@ local highlights = {
   { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
-  { hg =  "TSVariable" , fg = colors.magneta_bright},
+  { hg =  "TSVariable" , fg = colors.magneta},
   { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
