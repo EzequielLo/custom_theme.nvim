@@ -18,13 +18,12 @@ local colors = {
   foreground = '#000000',
   background = '#ffffff',
   comment_grey = '#505050',
-  gutter_fg_grey = '#efefe3',
+  gutter_fg_grey = '#4B5263',
 	cursor_grey = "#f0f0f0",
 	visual_grey = "#505050",
 	menu_grey = "#d7d7d7",
 	special_grey = "#0a0a0a",
 	vertsplit = "#efefef",
-	vertsplit = "#f0f0f8",
 
 }
 local highlights = {
