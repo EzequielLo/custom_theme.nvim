@@ -21,26 +21,7 @@ local colors = {
   special_grey = '#bfbfb8',
   vertsplit = '#595952',
 }
-
-	let g:terminal_color_0 = '#000000'
-	let g:terminal_color_1 = '#a60000'
-	let g:terminal_color_2 = '#005e00'
-	let g:terminal_color_3 = '#813e00'
-	let g:terminal_color_4 = '#0031a9'
-	let g:terminal_color_5 = '#721045'
-	let g:terminal_color_6 = '#00538b'
-	let g:terminal_color_7 = '#bfbfbf'
-	let g:terminal_color_8 = '#595959'
-	let g:terminal_color_9 = '#972500'
-	let g:terminal_color_10 = '#315b00'
-	let g:terminal_color_11 = '#70480f'
-	let g:terminal_color_12 = '#2544bb'
-	let g:terminal_color_13 = '#5317ac'
-	let g:terminal_color_14 = '#005a5f'
-	let g:terminal_color_15 = '#ffffff
-
 local highlights = {
-
   -- Syntax Groups (descriptions and ordering from `:h w18`)
   { hg = 'Comment', fg = colors.comment_grey, gui = 'italic', cterm = 'italic' }, -- any comment
   { hg = 'Constant', fg = colors.cyan }, --any constant
