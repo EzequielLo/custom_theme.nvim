@@ -19,9 +19,9 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-  cursor_grey = '#e0e6f0',
+  cursor_grey = 'f4f4f4',
   visual_grey = '#bfc0c2',
-  menu_grey = '#f4f4f4',
+  menu_grey = '#bfc0c4',
   special_grey = '#a8a8a8',
   vertsplit = '#bfc0c4',
 
