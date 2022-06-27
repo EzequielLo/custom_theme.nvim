@@ -11,7 +11,7 @@ local colors = {
 	blue3 = '#00538b',
   purple = '#5317aD',
 	magneta = '#8f0075',
-	magneta2 = '#9f004',
+	magneta2 = '#ff4a6f',
   cyan = '#005a52',
   white = '#fffff',
   black = '#000000',
@@ -19,11 +19,11 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-  cursor_grey = '#dde4fC',
-  visual_grey = '#304462',
+  cursor_grey = '#e0e6f0',
+  visual_grey = '#bfc0c2',
   menu_grey = '#dddddd',
   special_grey = '#a8a8a8',
-  vertsplit = '#304462',
+  vertsplit = '#bfc0c4',
 
 }
 local highlights = {
@@ -45,7 +45,7 @@ local highlights = {
   { hg = 'Keyword', fg = colors.purple }, --any other keyword
   { hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   { hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.dark_yellow }, --preprocessor #include
+  { hg = 'Include', fg = colors.purple }, --preprocessor #include
   { hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
   { hg = 'Macro', fg = colors.magneta }, --same as Define
   { hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
