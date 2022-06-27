@@ -21,7 +21,7 @@ local colors = {
   gutter_fg_grey = '#4B5263',
   cursor_grey = '#bfbfbC',
   visual_grey = '#bfbfb2',
-  menu_grey = '#595952',
+  menu_grey = '#4B5263',
   special_grey = '#bfbfb8',
   vertsplit = '#595952',
 }
@@ -135,12 +135,9 @@ local highlights = {
   { hg = 'GitSignsDelete', fg = colors.magneta2 },
 
   { hg = 'TSConstructor', fg = colors.magneta2 }, 
-  { hg = 'TSParameterReference', fg = colors.blue2 }, 
-  { hg = 'SStypebuiltin', fg = colors.purple }, 
-	{ hg = 'tsproperty', fg = colors.green },
-  { hg = 'TSParameter', fg = colors.blue3 },
+  { hg = 'TSTypebuiltin', fg = colors.purple }, 
 	{ hg = 'TSProperty', fg = colors.black },
-  { hg = 'TSVariable', fg = colors.bule3 },
+  { hg = 'TSVariable', fg = colors.blue3 },
   { hg = 'TSVariableBuiltin ', fg = colors.magneta2 },
 }
 
