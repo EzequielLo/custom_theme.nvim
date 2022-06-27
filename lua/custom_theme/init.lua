@@ -11,7 +11,7 @@ local colors = {
 	blue3 = '#00538b',
   purple = '#5317aD',
 	magneta = '#8f0075',
-	magneta2 = '#ff4a6f',
+	error = '#a60000 ',
   cyan = '#005a52',
   white = '#fffff',
   black = '#000000',
@@ -73,9 +73,9 @@ local highlights = {
   { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.magneta2, fg = colors.black }, --diff mode: Deleted line
+  { hg = 'DiffDelete', bg = colors.error, fg = colors.black }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
-  { hg = 'ErrorMsg', fg = colors.magneta2 }, --error messages on the command line
+  { hg = 'ErrorMsg', fg = colors.error }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.comment_grey }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
@@ -115,11 +115,11 @@ local highlights = {
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
-  { hg = 'DiagnosticError', fg = colors.magneta2 },
+  { hg = 'DiagnosticError', fg = colors.error },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
   { hg = 'DiagnosticHint', fg = colors.cyan },
-  { hg = 'DiagnosticUnderlineError', fg = colors.magneta2, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.error, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
@@ -133,10 +133,10 @@ local highlights = {
   -- ... an exception for my favorite plugin
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.magneta2 },
+  { hg = 'GitSignsDelete', fg = colors.error },
 
   { hg = 'TSTypebuiltin', fg = colors.purple }, 
-	{ hg = 'TSProperty', fg = colors.black },
+	{ hg = 'TSProperty', fg = colors.cyan },
   { hg = 'TSVariable', fg = colors.blue3 },
 }
 
