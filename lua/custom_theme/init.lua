@@ -21,7 +21,7 @@ local colors = {
   gutter_fg_grey = '#4B5263',
   cursor_grey = '#e0e6f0',
   visual_grey = '#bfc0c2',
-  menu_grey = '#dddddd',
+  menu_grey = '#f4f4f4',
   special_grey = '#a8a8a8',
   vertsplit = '#bfc0c4',
 
@@ -135,11 +135,9 @@ local highlights = {
   { hg = 'GitSignsChange', fg = colors.yellow },
   { hg = 'GitSignsDelete', fg = colors.magneta2 },
 
-  { hg = 'TSConstructor', fg = colors.magneta2 }, 
   { hg = 'TSTypebuiltin', fg = colors.purple }, 
 	{ hg = 'TSProperty', fg = colors.black },
   { hg = 'TSVariable', fg = colors.blue3 },
-  { hg = 'TSVariableBuiltin ', fg = colors.magneta2 },
 }
 
 M.colorscheme = function()
