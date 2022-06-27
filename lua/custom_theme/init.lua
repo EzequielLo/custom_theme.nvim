@@ -19,11 +19,12 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-  cursor_grey = '#bfbfb',
-  visual_grey = '#bfbfb',
-  menu_grey = '#59595',
-  special_grey = '#bfbfb',
-  vertsplit = '#59595',
+	cursor_grey = "#f0f0f0",
+	visual_grey = "#505050",
+	menu_grey = "#d7d7d7",
+	special_grey = "#0a0a0a",
+	vertsplit = "#efefef",
+	vertsplit = "#404148",
 
 }
 local highlights = {
