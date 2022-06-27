@@ -35,24 +35,24 @@ local highlights = {
   { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.dark_yellow }, --any variable name
-  { hg = 'Function', fg = colors.purple }, --function name (also: methods for classes)
-  { hg = 'Statement', fg = colors.blue }, --any statement
-  { hg = 'Conditional', fg = colors.blue }, --if, then, else, endif, switch, etc.
-  { hg = 'Repeat', fg = colors.blue }, --for, do, while, etc.
-  { hg = 'Label', fg = colors.blue }, --case, default, etc.
-  { hg = 'Operator', fg = colors.blue }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.blue }, --any other keyword
-  { hg = 'Exception', fg = colors.blue }, --try, catch, throw
+  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
+  { hg = 'Statement', fg = colors.purple }, --any statement
+  { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
+  { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
+  { hg = 'Label', fg = colors.purple }, --case, default, etc.
+  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  { hg = 'Keyword', fg = colors.purple }, --any other keyword
+  { hg = 'Exception', fg = colors.purple }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.purple }, --preprocessor #include
-  { hg = 'Define', fg = colors.blue }, --preprocessor #define
-  { hg = 'Macro', fg = colors.blue }, --same as Define
+  { hg = 'Include', fg = colors.blue }, --preprocessor #include
+  { hg = 'Define', fg = colors.purple }, --preprocessor #define
+  { hg = 'Macro', fg = colors.purple }, --same as Define
   { hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
   { hg = 'Type', fg = colors.yellow }, --int, long, char, etc.
   { hg = 'StorageClass', fg = colors.yellow }, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.yellow }, --A typedef
-  { hg = 'Special', fg = colors.purple }, --any special symbol
+  { hg = 'Special', fg = colors.blue }, --any special symbol
   { hg = 'SpecialChar', fg = colors.magneta }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
@@ -69,7 +69,7 @@ local highlights = {
   { hg = 'Cursor', fg = colors.black, bg = colors.blue }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
-  { hg = 'Directory', fg = colors.purple }, --directory names (and other special names in listings)
+  { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
   { hg = 'DiffDelete', bg = colors.dark_yellow, fg = colors.black }, --diff mode: Deleted line
@@ -250,9 +250,9 @@ local highlights = {
   --{ hg =  "TSFunction" , fg = colors.blue},
   { hg =  "TSFuncBuiltin" , fg = colors.magneta},
   --{ hg =  "TSFuncMacro" , fg = colors.blue},
-  { hg =  "TSInclude " , fg = colors.blue},
+  { hg =  "TSInclude " , fg = colors.purple},
   --{ hg =  "TSKeyword" , fg = colors.purple},
-  { hg =  "TSKeywordFunction" , fg = colors.blue},
+  { hg =  "TSKeywordFunction" , fg = colors.purple},
   --{ hg =  "TSKeywordOperator" , fg = colors.purple},
   --{ hg =  "TSKeywordReturn" , fg = colors.magneta},
   --{ hg =  "TSLabel" , fg = colors.purple},
