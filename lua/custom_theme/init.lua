@@ -1,29 +1,25 @@
 local M = {}
 
 local colors = {
-  bg0 = "#282828",
-  bg1 = "#3c3836",
-  bg2 = "#504945",
-  bg3 = "#665c54",
-  b4 = "#7c6f64",
-  fg0 = "#fbf1c7",
-  fg1 = "#ebdbb2",
-  fg2 = "#d5c4a1",
-  fg3 = "#bdae93",
-  fg4 = "#a89984",
-  green = "#b8bb26",
-  yellow = "#fabd2f",
-  blue = "#83a598",
-  purple = "#d3869b",
-  aqua = "#8ec07c",
-  orange = "#fe8019",
-  neutral_green = "#98971a",
-  neutral_yellow = "#d79921",
-  neutral_blue = "#458588",
-  neutral_purple = "#b16286",
-  neutral_aqua = "#689d6a",
-  neutral_orange = "#d65d0e",
-  gray = "#928374",
+  red = '#E06C75',
+  dark_red = '#BE5046',
+  green = '#98C379',
+  yellow = '#E5C07B',
+  dark_yellow = '#D19A66',
+  blue = '#61AFEF',
+  purple = '#C678DD',
+  cyan = '#56B6C2',
+  white = '#ABB2BF',
+  black = '#282C34',
+  foreground = '#ABB2BF',
+  background = '#282C34',
+  comment_grey = '#5C6370',
+  gutter_fg_grey = '#4B5263',
+  cursor_grey = '#2C323C',
+  visual_grey = '#3E4452',
+  menu_grey = '#3E4452',
+  special_grey = '#3B4048',
+  vertsplit = '#3E4452',
 }
 
 
@@ -55,7 +51,7 @@ local highlights = {
   { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.yellow }, --A typedef
   { hg = 'Special', fg = colors.blue }, --any special symbol
-  { hg = 'SpecialChar', fg = colors.magneta }, --special character in a constant
+  { hg = 'SpecialChar', fg = colors.white }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
   { hg = 'SpecialComment', fg = colors.comment_grey }, --special things inside a comment
@@ -98,9 +94,9 @@ local highlights = {
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
   { hg = 'SpecialKey', fg = colors.special_grey }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
   { hg = 'SpellBad', fg = colors.dark_yellow, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellCap', fg = colors.magneta }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellLocal', fg = colors.magneta }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-  { hg = 'SpellRare', fg = colors.magneta }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+  { hg = 'SpellCap', fg = colors.white }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellLocal', fg = colors.white }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+  { hg = 'SpellRare', fg = colors.white }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
   { hg = 'StatusLine', fg = colors.white, bg = colors.cursor_grey }, --status line of current window
   { hg = 'StatusLineNC', fg = colors.comment_grey }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor_grey }, --status line of current :terminal window
@@ -140,26 +136,26 @@ local highlights = {
 --  { hg ="cssAttrComma",  fg=colors.purple },
 --  { hg ="cssAttributeSelector", fg=colors.green },
 --  { hg ="cssBraces", fg= colors.white },
---  { hg ="cssClassName", fg= colors.magneta },
---  { hg ="cssClassNameDot", fg= colors.magneta },
+--  { hg ="cssClassName", fg= colors.white },
+--  { hg ="cssClassNameDot", fg= colors.white },
 --  { hg ="cssDefinition", fg= colors.purple },
---  { hg ="cssFontAttr", fg= colors.magneta },
+--  { hg ="cssFontAttr", fg= colors.white },
 --  { hg ="cssFontDescriptor", fg= colors.purple },
 --  { hg ="cssFunctionName", fg= colors.blue },
 --  { hg ="cssIdentifier", fg= colors.blue },
 --  { hg ="cssImportant", fg= colors.purple },
   { hg ="cssInclude", fg= colors.white },
   { hg ="cssIncludeKeyword", fg= colors.purple },
-  { hg ="cssMediaType", fg= colors.magneta },
+  { hg ="cssMediaType", fg= colors.white },
   { hg ="cssProp", fg= colors.white },
-  { hg ="cssPseudoClassId", fg= colors.magneta },
+  { hg ="cssPseudoClassId", fg= colors.white },
   { hg ="cssSelectorOp", fg= colors.purple },
   { hg ="cssSelectorOp2", fg= colors.purple },
   { hg ="cssTagName", fg= colors.dark_red },
 
 -- HTML (keep consistent with Markdown, below)
-  { hg ="htmlArg", fg= colors.magneta },
-  { hg ="htmlBold", fg= colors.magneta, gui= "bold", cterm= "bold" },
+  { hg ="htmlArg", fg= colors.white },
+  { hg ="htmlBold", fg= colors.white, gui= "bold", cterm= "bold" },
   { hg ="htmlBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="htmlEndTag", fg= colors.white },
   { hg ="htmlH1", fg= colors.dark_dark_yellow },
@@ -170,7 +166,7 @@ local highlights = {
   { hg ="htmlH6", fg= colors.dark_dark_yellow },
   { hg ="htmlItalic", fg= colors.purple, gui= "italic", cterm= "italic" },
   { hg ="htmlLink", fg= colors.cyan, gui= "underline", cterm= "underline" },
-  { hg ="htmlSpecialChar", fg= colors.magneta },
+  { hg ="htmlSpecialChar", fg= colors.white },
   { hg ="htmlSpecialTagName", fg= colors.dark_red },
   { hg ="htmlTag", fg= colors.white },
   { hg ="htmlTagN", fg= colors.dark_red },
@@ -181,21 +177,21 @@ local highlights = {
  -- { hg ="javaScriptBraces", fg= colors.white },
   --{ hg ="javaScriptFunction", fg= colors.purple },
   --{ hg ="javaScriptIdentifier", fg= colors.purple },
-  --{ hg ="javaScriptNull", fg= colors.magneta },
-  --{ hg ="javaScriptNumber", fg= colors.magneta },
+  --{ hg ="javaScriptNull", fg= colors.white },
+  --{ hg ="javaScriptNumber", fg= colors.white },
   --{ hg ="javaScriptRequire", fg= colors.cyan },
   --{ hg ="javaScriptReserved", fg= colors.purple },
 
   -- typescript
 	--{ hg = "typescriptTSType" , fg = colors.yellow },
   --{ hg = "typescriptTSConstructor" , fg = colors.yellow},
-  --{ hg = "typescriptTSTypeBuiltin" , fg = colors.magneta},
+  --{ hg = "typescriptTSTypeBuiltin" , fg = colors.white},
 
 -- JSON
   { hg ="jsonCommentError", fg= colors.white },
   { hg ="jsonKeyword", fg= colors.dark_red },
-  { hg ="jsonBoolean", fg= colors.magneta },
-  { hg ="jsonNumber", fg= colors.magneta },
+  { hg ="jsonBoolean", fg= colors.white },
+  { hg ="jsonNumber", fg= colors.white },
   { hg ="jsonQuote", fg= colors.white },
   { hg ="jsonMissingCommaError", fg= colors.dark_red, gui= "reverse" },
   { hg ="jsonNoQuotesError", fg= colors.dark_red, gui= "reverse" },
@@ -206,7 +202,7 @@ local highlights = {
 
 -- Markdown (keep consistent with HTML, above)
   { hg ="markdownBlockquote", fg= colors.comment_grey },
-  { hg ="markdownBold", fg= colors.magneta, gui= "bold", cterm= "bold" },
+  { hg ="markdownBold", fg= colors.white, gui= "bold", cterm= "bold" },
   { hg ="markdownBoldItalic", fg= colors.green, gui= "bold,italic", cterm= "bold,italic" },
   { hg ="markdownCode", fg= colors.green },
   { hg ="markdownCodeBlock", fg= colors.green },
@@ -233,7 +229,7 @@ local highlights = {
   -- Tree-sitter
   --{ hg =  "TSAnnotation " , fg = colors.dark_yellow},
   --{ hg =  "TSAttribute" , fg = colors.purple},
-  --{ hg =  "TSBoolean " , fg = colors.magneta},
+  --{ hg =  "TSBoolean " , fg = colors.white},
   --{ hg =  "TSCharacter" , fg = colors.green},
   --{ hg =  "TSComment" , fg = colors.green},
   --{ hg =  "SConditional" , fg = colors.green},
@@ -242,7 +238,7 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = colors.bg, bg=colors.error},
   { hg =  "TSConstant " , fg = colors.white},
   --{ hg =  "commentTSConstant" , fg = colors.keyword},
-  { hg =  "TSConstBuiltin" , fg = colors.magneta},
+  { hg =  "TSConstBuiltin" , fg = colors.white},
   { hg =  "TSConstMacro" , fg = colors.white},
   { hg =  "TSConstructor" , fg = colors.white},
   --{ hg =  "TSError" , fg = colors.green},
@@ -250,13 +246,13 @@ local highlights = {
   { hg =  "TSField" , fg = colors.white},
   --{ hg =  "TSFloat " , fg = colors.blue},
   --{ hg =  "TSFunction" , fg = colors.blue},
-  { hg =  "TSFuncBuiltin" , fg = colors.magneta , gui="bold"},
+  { hg =  "TSFuncBuiltin" , fg = colors.white},
   --{ hg =  "TSFuncMacro" , fg = colors.blue},
   { hg =  "TSInclude " , fg = colors.purple},
   --{ hg =  "TSKeyword" , fg = colors.purple},
-  { hg =  "TSKeywordFunction" , fg = colors.purple, gui="bold"},
+  { hg =  "TSKeywordFunction" , fg = colors.purple},
   --{ hg =  "TSKeywordOperator" , fg = colors.purple},
-  --{ hg =  "TSKeywordReturn" , fg = colors.magneta},
+  --{ hg =  "TSKeywordReturn" , fg = colors.white},
   --{ hg =  "TSLabel" , fg = colors.purple},
   --{ hg =  "TSMethod" , fg = colors.blue},
   { hg =  "TSNamespace" , fg = colors.yellow},
@@ -269,20 +265,20 @@ local highlights = {
   --{ hg =  "TSProperty" , fg = colors.white},
   --{ hg =  "TSString" , fg = colors.green},
   --{ hg =  "TSStringRegex" , fg = colors.green},
-  { hg =  "TSStringEscape" , fg = colors.yellow, gui="bold"},
+  { hg =  "TSStringEscape" , fg = colors.yellow},
   --{ hg =  "TSStringSpecial" , fg = blue},
   --{ hg =  "TSRepeat" , fg = colors},
   --{ hg =  "TSStorageClass" , fg = colors},
   --{ hg =  "TSType " , fg = colors.yellow},
-  { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow, gui="bold"},
+  { hg =  "TSTypeBuiltin " , fg = colors.dark_yellow},
   --{ hg =  "TSTypeDefinition" , fg = colors},
   --{ hg =  "TSTypeQualifier" , fg = colors.cyan},
-  { hg =  "TSVariable" , fg = colors.magneta},
-  { hg =  "TSVariableBuiltin", fg = colors.yellow, gui="bold"},
+  { hg =  "TSVariable" , fg = colors.white},
+  { hg =  "TSVariableBuiltin", fg = colors.yellow},
   --{ hg =  'TSTag', fg = colors.dark_yellow},
   --{ hg =  'TSTagAttribute', fg = colors.dark_yellow},
   --{ hg =  'TSPunctDelimiter', fg = colors.white},
-  { hg =  "TSTitle " , fg = colors.magneta},
+  { hg =  "TSTitle " , fg = colors.white},
   { hg =  "TSLiteral ", fg = colors.green},
   { hg =  'TSURI ', fg = colors.cyan},
   --{ hg =  'TSPunctSpecial', fg = colors.cyan},
@@ -295,7 +291,7 @@ local highlights = {
 	 { hg = 'rainbowcol1', fg = colors.white, bg = colors.none },
 	 { hg = 'rainbowcol2', fg = colors.yellow, bg = colors.none },
 	 { hg = 'rainbowcol3', fg = colors.blue , bg = colors.none },
-	 { hg = 'rainbowcol4', fg = colors.magneta, bg = colors.none },
+	 { hg = 'rainbowcol4', fg = colors.white, bg = colors.none },
 	 { hg = 'rainbowcol5', fg = colors.purple, bg = colors.none },
 	 { hg = 'rainbowcol6', fg = colors.green, bg = colors.none },
 	 { hg = 'rainbowcol7', fg = colors.cyan, bg = colors.none },
