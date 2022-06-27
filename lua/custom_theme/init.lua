@@ -19,11 +19,11 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-  cursor_grey = '#bfbfbC',
-  visual_grey = '#bfbfb2',
-  menu_grey = '#4B5263',
-  special_grey = '#bfbfb8',
-  vertsplit = '#595952',
+  cursor_grey = '#dde4fC',
+  visual_grey = '#304462',
+  menu_grey = '#dddddd',
+  special_grey = '#a8a8a8',
+  vertsplit = '#304462',
 }
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
