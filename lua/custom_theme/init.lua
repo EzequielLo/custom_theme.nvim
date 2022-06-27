@@ -11,6 +11,7 @@ local colors = {
 	blue3 = '#00538b',
   purple = '#5317aD',
 	magneta = '#8f0075',
+	magneta2 = '#9f004',
   cyan = '#005a52',
   white = '#fffff',
   black = '#000000',
@@ -39,7 +40,7 @@ local highlights = {
   { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   { hg = 'Repeat', fg = colors.magneta }, --for, do, while, etc.
   { hg = 'Label', fg = colors.red }, --case, default, etc.
-  { hg = 'Operator', fg = colors.black }, --sizeof", "+", "*", etc.
+  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.purple }, --any other keyword
   { hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   { hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
@@ -51,7 +52,7 @@ local highlights = {
   { hg = 'StorageClass', fg = colors.blue3 }, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.cyan }, --A typedef
-  { hg = 'Special', fg = colors.green }, --any special symbol
+  { hg = 'Special', fg = colors.black }, --any special symbol
   { hg = 'SpecialChar', fg = colors.yellow }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
@@ -71,9 +72,9 @@ local highlights = {
   { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.red, fg = colors.black }, --diff mode: Deleted line
+  { hg = 'DiffDelete', bg = colors.magneta2, fg = colors.black }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
-  { hg = 'ErrorMsg', fg = colors.red }, --error messages on the command line
+  { hg = 'ErrorMsg', fg = colors.magneta2 }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.comment_grey }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
@@ -113,11 +114,11 @@ local highlights = {
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
-  { hg = 'DiagnosticError', fg = colors.red },
+  { hg = 'DiagnosticError', fg = colors.magneta2 },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
   { hg = 'DiagnosticHint', fg = colors.cyan },
-  { hg = 'DiagnosticUnderlineError', fg = colors.red, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineError', fg = colors.magneta2, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
@@ -131,7 +132,7 @@ local highlights = {
   -- ... an exception for my favorite plugin
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.red },
+  { hg = 'GitSignsDelete', fg = colors.magneta2 },
 }
 
 M.colorscheme = function()
