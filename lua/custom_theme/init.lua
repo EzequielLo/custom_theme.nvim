@@ -10,12 +10,12 @@ boolean = "#bc5454",
 Keyword = "#994cc3",
 comment = "#939dbb",
 cursorline= "#F0F0F0",
-black "#403f53"
-red "#FF0000"
-green "#00FF00"
-yellow "#E0AF0b"
-blue "#0000FF"
-white "#FFFFFF"
+black = "#403f53",
+red = "#FF0000",
+green = "#00FF00",
+yellow = "#E0AF0b",
+blue = "#0000FF",
+white = "#FFFFFF",
 }
 
 local highlights = {
