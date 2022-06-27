@@ -24,6 +24,7 @@ local colors = {
   menu_grey = '#dddddd',
   special_grey = '#a8a8a8',
   vertsplit = '#304462',
+
 }
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
