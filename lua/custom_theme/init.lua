@@ -49,7 +49,7 @@ local highlights = {
   { hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
   { hg = 'Macro', fg = colors.magneta }, --same as Define
   { hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.blue3 }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.cyan }, --int, long, char, etc.
   { hg = 'StorageClass', fg = colors.blue3 }, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.cyan }, --A typedef
@@ -136,7 +136,7 @@ local highlights = {
   { hg = 'GitSignsDelete', fg = colors.error },
 
   { hg = 'TSTypebuiltin', fg = colors.purple }, 
-	{ hg = 'TSProperty', fg = colors.cyan },
+	{ hg = 'TSProperty', fg = colors.black },
   { hg = 'TSVariable', fg = colors.blue3 },
 }
 
