@@ -260,7 +260,7 @@ local highlights = {
   --{ hg =  "TSNumber" , fg = colors.purple},
   --{ hg =  "TSOperator" , fg = colors.foreground},
   { hg =  "TSParameter" , fg = colors.dark_yellow},
-  --{ hg =  "TSParameterReference" , fg = colors.dark_yellow},
+  { hg =  "TSParameterReference" , fg = colors.dark_yellow},
   --{ hg =  "TSPreProc" , fg = colors.base00},
   { hg =  "TSProperty" , fg = colors.white},
   --{ hg =  "TSString" , fg = colors.green},
