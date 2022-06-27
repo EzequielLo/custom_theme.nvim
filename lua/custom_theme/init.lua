@@ -133,6 +133,15 @@ local highlights = {
   { hg = 'GitSignsAdd', fg = colors.green },
   { hg = 'GitSignsChange', fg = colors.yellow },
   { hg = 'GitSignsDelete', fg = colors.magneta2 },
+
+  { hg = 'TSConstructor', fg = colors.magneta2 }, 
+  { hg = 'TSParameterReference', fg = colors.blue2 }, 
+  { hg = 'SStypebuiltin', fg = colors.purple }, 
+	{ hg = 'tsproperty', fg = colors.green },
+  { hg = 'TSParameter', fg = colors.blue3 },
+	{ hg = 'TSProperty', fg = colors.black },
+  { hg = 'TSVariable', fg = colors.bule3 },
+  { hg = 'TSVariableBuiltin ', fg = colors.magneta2 },
 }
 
 M.colorscheme = function()
