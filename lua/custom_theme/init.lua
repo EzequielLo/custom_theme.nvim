@@ -183,9 +183,7 @@ local highlights = {
   { hg ="javaScriptReserved", fg= colors.purple },
 
   -- typescript
-	{ hg = "typescriptTSType" , fg = colors.yellow },
-  { hg = "typescriptTSConstructor" , fg = colors.yellow},
-  { hg = "typescriptTSTypeBuiltin" , fg = colors.dark_yellow},
+	{ hg = "typescriptReserved" , fg = colors.purple },
 
 -- JSON
 --  { hg ="jsonCommentError", fg= colors.white },
