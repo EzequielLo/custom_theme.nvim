@@ -109,8 +109,8 @@ local highlights = {
   { hg = 'TabLineSel', fg = colors.white }, --tab pages line, active tab page label
   { hg = 'Terminal', fg = colors.white, bg = colors.black }, --terminal window (see terminal-size-color)
   { hg = 'Title', fg = colors.green }, --titles for output from " =set all", ":autocmd" etc.
-  { hg = 'Visual', bg = colors.visual_grey }, --Visual mode selection
-  { hg = 'VisualNOS', bg = colors.visual_grey }, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
+  { hg = 'Visual', bg = colors.cursor_grey }, --Visual mode selection
+  { hg = 'VisualNOS', bg = colors.cursor_grey }, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
   { hg = 'WarningMsg', fg = colors.yellow }, --warning messages
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
