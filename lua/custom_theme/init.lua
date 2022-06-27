@@ -42,7 +42,7 @@ local highlights = {
   { hg = 'Keyword', fg = colors.blue }, --any other keyword
   { hg = 'Exception', fg = colors.purple }, --try, catch, throw
   { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.purple }, --preprocessor #include
+  { hg = 'Include', fg = colors.blue }, --preprocessor #include
   { hg = 'Define', fg = colors.purple }, --preprocessor #define
   { hg = 'Macro', fg = colors.purple }, --same as Define
   { hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
@@ -50,7 +50,7 @@ local highlights = {
   { hg = 'StorageClass', fg = colors.yellow }, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
   { hg = 'Typedef', fg = colors.yellow }, --A typedef
-  { hg = 'Special', fg = colors.blue,gui="bold" }, --any special symbol
+  { hg = 'Special', fg = colors.white}, --any special symbol
   { hg = 'SpecialChar', fg = colors.white }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
