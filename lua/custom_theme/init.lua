@@ -19,11 +19,11 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-  cursor_grey = 'f4f4f4',
-  visual_grey = '#bfc0c2',
-  menu_grey = '#bfc0c4',
-  special_grey = '#a8a8a8',
-  vertsplit = '#bfc0c4',
+  cursor_grey = '#bfbfb',
+  visual_grey = '#bfbfb',
+  menu_grey = '#59595',
+  special_grey = '#bfbfb',
+  vertsplit = '#59595',
 
 }
 local highlights = {
@@ -88,10 +88,10 @@ local highlights = {
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.foreground, bg = colors.background }, --normal text
-  { hg = 'Pmenu', gui=italic, guibg="#f0f0f0", guifg="#000000" }, --Popup menu: normal item.
-  { hg = 'PmenuSel', gui=none, guibg="#505050", guifg="#ffffff" }, --Popup menu: selected item.
-  { hg = 'PmenuSbar', guibg="#f0f0f0" }, --Popup menu: scrollbar.
-  { hg = 'PmenuThumb', guibg="#505050" }, --Popup menu: Thumb of the scrollbar.
+  { hg = 'Pmenu', fg = colors.white, bg = colors.menu_grey }, --Popup menu: normal item.
+  { hg = 'PmenuSel', fg = colors.cursor_grey, bg = colors.blue }, --Popup menu: selected item.
+  { hg = 'PmenuSbar', bg = colors.cursor_grey }, --Popup menu: scrollbar.
+  { hg = 'PmenuThumb', bg = colors.white }, --Popup menu: Thumb of the scrollbar.
   { hg = 'Question', fg = colors.purple }, --hit-enter prompt and yes/no questions
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
@@ -101,9 +101,9 @@ local highlights = {
   { hg = 'SpellLocal', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
   { hg = 'StatusLine', fg = colors.white, bg = colors.black }, --status line of current window
-  { hg = 'StatusLineNC', gui=none ,guibg='#f0f0f0' ,guifg='#505050' }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-  { hg = 'StatusLineTerm', gui=none ,guibg="#005e00" ,guifg="#ffffff" }, --status line of current :terminal window
-  { hg = 'StatusLineTermNC', gui=none, guibg="#f0f0f0", guifg="#005e00" }, --status line of non-current  =terminal window
+  { hg = 'StatusLineNC', fg = colors.comment_grey }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+  { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor_grey }, --status line of current :terminal window
+  { hg = 'StatusLineTermNC', fg = colors.comment_grey }, --status line of non-current  =terminal window
   { hg = 'TabLine', fg = colors.comment_grey }, --tab pages line, not active tab page label
   { hg = 'TabLineFill' }, --tab pages line, where there are no labels
   { hg = 'TabLineSel', fg = colors.white }, --tab pages line, active tab page label
