@@ -4,16 +4,19 @@ local colors = {
   red = '#721045',
   dark_red = '#972506',
   green = '#005e00',
-  yellow = '#70480B',
-  dark_yellow = '#813e06',
-  blue = '#0031ab',
+  yellow = '#813e00',
+  dark_yellow = '#97250',
+  blue = '#2544bb',
+	blue2 = '#0000c0',
+	blue3 = '#00538b',
   purple = '#5317aD',
+	magneta = '#8f0075',
   cyan = '#005a52',
   white = '#fffff',
   black = '#000000',
   foreground = '#000000',
   background = '#ffffff',
-  comment_grey = '#595950',
+  comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
   cursor_grey = '#bfbfbC',
   visual_grey = '#bfbfb2',
@@ -24,32 +27,32 @@ local colors = {
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
   { hg = 'Comment', fg = colors.comment_grey, gui = 'italic', cterm = 'italic' }, -- any comment
-  { hg = 'Constant', fg = colors.cyan }, --any constant
-  { hg = 'String', fg = colors.green }, --a string constant: "this is a string"
-  { hg = 'Character', fg = colors.green }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.dark_yellow }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.dark_yellow }, --a boolean constant: TRUE, false
-  { hg = 'Float', fg = colors.dark_yellow }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.red }, --any variable name
-  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
+  { hg = 'Constant', fg = colors.blue2 }, --any constant
+  { hg = 'String', fg = colors.blue }, --a string constant: "this is a string"
+  { hg = 'Character', fg = colors.blue }, --a character constant: 'c', '\n'
+  { hg = 'Number', fg = colors.blue2 }, --a number constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.green }, --a boolean constant: TRUE, false
+  { hg = 'Float', fg = colors.blue2 }, --a floating point constant: 2.3e10
+  { hg = 'Identifier', fg = colors.blue3 }, --any variable name
+  { hg = 'Function', fg = colors.red }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
   { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
-  { hg = 'Repeat', fg = colors.purple }, --for, do, while, etc.
-  { hg = 'Label', fg = colors.purple }, --case, default, etc.
-  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.red }, --any other keyword
-  { hg = 'Exception', fg = colors.purple }, --try, catch, throw
-  { hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.blue }, --preprocessor #include
-  { hg = 'Define', fg = colors.purple }, --preprocessor #define
-  { hg = 'Macro', fg = colors.purple }, --same as Define
-  { hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.yellow }, --int, long, char, etc.
-  { hg = 'StorageClass', fg = colors.yellow }, --static, register, volatile, etc.
-  { hg = 'Structure', fg = colors.yellow }, --struct, union, enum, etc.
-  { hg = 'Typedef', fg = colors.yellow }, --A typedef
-  { hg = 'Special', fg = colors.blue }, --any special symbol
-  { hg = 'SpecialChar', fg = colors.dark_yellow }, --special character in a constant
+  { hg = 'Repeat', fg = colors.magneta }, --for, do, while, etc.
+  { hg = 'Label', fg = colors.red }, --case, default, etc.
+  { hg = 'Operator', fg = colors.black }, --sizeof", "+", "*", etc.
+  { hg = 'Keyword', fg = colors.purple }, --any other keyword
+  { hg = 'Exception', fg = colors.yellow }, --try, catch, throw
+  { hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
+  { hg = 'Include', fg = colors.dark_yellow }, --preprocessor #include
+  { hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
+  { hg = 'Macro', fg = colors.magneta }, --same as Define
+  { hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
+  { hg = 'Type', fg = colors.blue3 }, --int, long, char, etc.
+  { hg = 'StorageClass', fg = colors.blue3 }, --static, register, volatile, etc.
+  { hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
+  { hg = 'Typedef', fg = colors.cyan }, --A typedef
+  { hg = 'Special', fg = colors.green }, --any special symbol
+  { hg = 'SpecialChar', fg = colors.yellow }, --special character in a constant
   { hg = 'Tag' }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
   { hg = 'SpecialComment', fg = colors.comment_grey }, --special things inside a comment
