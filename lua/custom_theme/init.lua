@@ -112,7 +112,7 @@ local highlights = {
   { hg = 'SpellCap'}, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal'}, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-  { hg = 'StatusLine', fg= colors.statusBarForeground, bg = statusBarBackground}, --status line of current window
+  { hg = 'StatusLine', fg= colors.statusBarForeground, bg = colors.statusBarBackground}, --status line of current window
   { hg = 'StatusLineNC'}, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   { hg = 'StatusLineTerm'}, --status line of current :terminal window
   { hg = 'StatusLineTermNC'}, --status line of non-current  =terminal window
