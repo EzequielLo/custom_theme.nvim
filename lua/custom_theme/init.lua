@@ -170,7 +170,7 @@ local highlights = {
   --{ hg =  "TSNone"              , };    -- TODO: docs
   --{ hg =  "TSNumber"            , };    -- For all numbers
   --{ hg =  "TSOperator" , fg = c.syntax.keyword }, -- For any operator: `+`, but also `->` and `*` in C.
-  { hg =  "TSParameter" , fg = colors.foreground }, -- For parameters of a function.
+  { hg =  "TSParameter" , fg = colors.cursor_grey }, -- For parameters of a function.
   --{ hg =  "TSParameterReference", };    -- For references to parameters of a function.
   { hg =  "TSProperty" , fg = colors.green }, -- Same as `TSField`.
 	{ hg =  "TSPunctDelimiter" , fg = colors.foreground}, -- For delimiters ie: `.`
