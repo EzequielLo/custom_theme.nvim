@@ -135,8 +135,9 @@ local highlights = {
   { hg = 'GitSignsChange', fg = colors.yellow },
   { hg = 'GitSignsDelete', fg = colors.error },
 
+  { hg = 'TSConstructor', fg = colors.green },
+	{ hg = 'TSProperty', fg = colors.blue2 },
   { hg = 'TSTypebuiltin', fg = colors.purple }, 
-	{ hg = 'TSProperty', fg = colors.black },
   { hg = 'TSVariable', fg = colors.blue3 },
 }
 
