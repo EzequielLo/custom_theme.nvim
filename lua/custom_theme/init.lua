@@ -38,7 +38,7 @@ bracketMatchBorder = "#2AA298",
 red =  "#E64D49",
 yellow = "#daaa01",
 cyan = "#49d0c5",
-blue  = "#6fbef6",
+blue  = "#4876d6",
 gutter_fg_grey = '#E0E0E0',
 cursor_grey = '#90A7B2',
 visual_grey = '#F0F0F0',
@@ -102,7 +102,7 @@ local highlights = {
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
-  { hg = 'LineNr', fg = colors.gutter_fg_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  { hg = 'LineNr', fg = colors.special_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
   { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
