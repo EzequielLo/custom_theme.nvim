@@ -1,128 +1,126 @@
 local M = {}
 
 local colors = {
-  red = '#721045',
-  dark_red = '#972506',
-  green = '#005e00',
-  yellow = '#813e00',
-  dark_yellow = '#972500',
-  blue = '#2544bb',
-	blue2 = '#0000c0',
-	blue3 = '#00538b',
-  purple = '#5317aD',
-	magneta = '#8f0075',
-	error = '#a60000 ',
-  cyan = '#005a52',
+  red = '#ff8059',
+  green = '#44bc44',
+  yellow = '#d0bc00',
+  blue = '#2fafff',
+  purple = '#9f80ff',
+	error = '#ef8690',
+  warning = "#b0aa00"
+  hint = "#5f6fff"
+  cyan = '#00d3d0',
   white = '#ffffff',
   black = '#000000',
   foreground = '#000000',
   background = '#ffffff',
-  comment_grey = '#505050',
-  gutter_fg_grey = '#4B5263',
-	cursor_grey = "#90A7B2",
-	visual_grey = "#F0F0F0",
-	menu_grey = "#F0F0F0",
-	special_grey = "#403f53",
+  comment = '#d0a070',
+  gutter_fg = '#4B5263',
+	cursor = "#90A7B2",
+	visual = "#F0F0F0",
+	menu = "#F0F0F0",
+	special = "#403f53",
 	vertsplit = "#F0F0F0",
-
+  changed = "#2a2000",  
+  removed = "#40160f", 
+  added  = "#005a36", 
 }
-
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
-  { hg = 'Comment', fg = colors.comment_grey, gui = 'italic', cterm = 'italic' }, -- any comment
-  { hg = 'Constant', fg = colors.blue2 }, --any constant
-  { hg = 'String', fg = colors.blue }, --a string constant: "this is a string"
-  { hg = 'Character', fg = colors.blue }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.blue2 }, --a number constant: 234, 0xff
+  { hg = 'Comment', fg = colors.comment, gui = 'italic', cterm = 'italic' }, -- any comment
+  { hg = 'Constant', fg = colors.cyan }, --any constant
+  { hg = 'String', fg = colors.red }, --a string constant: "this is a string"
+  { hg = 'Character', fg = colors.red }, --a character constant: 'c', '\n'
+  --{ hg = 'Number', fg = colors.blue }, --a number constant: 234, 0xff
   { hg = 'Boolean', fg = colors.green }, --a boolean constant: TRUE, false
-  { hg = 'Float', fg = colors.blue2 }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.blue3 }, --any variable name
-  { hg = 'Function', fg = colors.red }, --function name (also: methods for classes)
+  -- { hg = 'Float', fg = colors.blue }, --a floating point constant: 2.3e10
+  { hg = 'Identifier', fg = colors.black }, --any variable name
+  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
-  { hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
-  { hg = 'Repeat', fg = colors.magneta }, --for, do, while, etc.
-  { hg = 'Label', fg = colors.red }, --case, default, etc.
-  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
+  --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
+ -- { hg = 'Label', fg = colors.red }, --case, default, etc.
+  --{ hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.purple }, --any other keyword
-  { hg = 'Exception', fg = colors.yellow }, --try, catch, throw
-  { hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.purple }, --preprocessor #include
-  { hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
-  { hg = 'Macro', fg = colors.magneta }, --same as Define
-  { hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
+ -- { hg = 'Exception', fg = colors.yellow }, --try, catch, throw
+ -- { hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
+ -- { hg = 'Include', fg = colors.purple }, --preprocessor #include
+  --{ hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
+  --{ hg = 'Macro', fg = colors.magneta }, --same as Define
+  --{ hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
   { hg = 'Type', fg = colors.cyan }, --int, long, char, etc.
-  { hg = 'StorageClass', fg = colors.blue3 }, --static, register, volatile, etc.
-  { hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
-  { hg = 'Typedef', fg = colors.cyan }, --A typedef
-  { hg = 'Special', fg = colors.black }, --any special symbol
-  { hg = 'SpecialChar', fg = colors.yellow }, --special character in a constant
-  { hg = 'Tag' }, --you can use CTRL-] on this
-  { hg = 'Delimiter' }, --character that needs attention
-  { hg = 'SpecialComment', fg = colors.comment_grey }, --special things inside a comment
+  --{ hg = 'StorageClass', fg = colors.blue3 }, --static, register, volatile, etc.
+  --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
+  --{ hg = 'Typedef', fg = colors.cyan }, --A typedef
+  --{ hg = 'Special', fg = colors.black }, --any special symbol
+  --{ hg = 'SpecialChar', fg = colors.yellow }, --special character in a constant
+  --{ hg = 'Tag' }, --you can use CTRL-] on this
+  --{ hg = 'Delimiter' }, --character that needs attention
+  --{ hg = 'SpecialComment', fg = colors.comment }, --special things inside a comment
   { hg = 'Debug' }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
-  { hg = 'Error', fg = colors.red }, --any erroneous construct
+  { hg = 'Error', fg = colors.error }, --any erroneous construct
   { hg = 'Todo', fg = colors.purple }, --anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
-  { hg = 'ColorColumn', bg = colors.cursor_grey }, --used for the columns set with 'colorcolumn'
+  { hg = 'ColorColumn', bg = colors.cursor }, --used for the columns set with 'colorcolumn'
   { hg = 'Conceal' }, --placeholder characters substituted for concealed text (see 'conceallevel')
   { hg = 'Cursor', fg = colors.black, bg = colors.blue }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
-  { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
+  { hg = 'CursorLine', bg = colors.cursor }, --the screen line that the cursor is in when 'cursorline' is set
   { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
-  { hg = 'DiffAdd', bg = colors.green, fg = colors.black }, --diff mode: Added line
-  { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
+  { hg = 'DiffAdd', bg = colors.added, fg = colors.black }, --diff mode: Added line
+  { hg = 'DiffChange', fg = colors.changed, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
   { hg = 'DiffDelete', bg = colors.error, fg = colors.black }, --diff mode: Deleted line
-  { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
+  { hg = 'DiffText', bg = colors.warning, fg = colors.black }, --diff mode: Changed text within a changed line
   { hg = 'ErrorMsg', fg = colors.error }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
-  { hg = 'Folded', fg = colors.comment_grey }, --line used for closed folds
+  { hg = 'Folded', fg = colors.comment }, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
-  { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment_grey }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
+  { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
   { hg = 'LineNr', fg = colors.gutter_fg_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
   { hg = 'MatchParen', fg = colors.green, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
   { hg = 'MoreMsg' }, --more-prompt
-  { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
+  { hg = 'NonText', fg = colors.special }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.foreground, bg = colors.background }, --normal text
-  { hg = 'Pmenu', fg = colors.black, bg = colors.menu_grey }, --Popup menu: normal item.
+  { hg = 'Pmenu', fg = colors.black, bg = colors.menu }, --Popup menu: normal item.
   { hg = 'PmenuSel', fg = colors.green, bg = colors.visual_grey }, --Popup menu: selected item.
   { hg = 'PmenuSbar', bg = colors.white }, --Popup menu: scrollbar.
   { hg = 'PmenuThumb', bg = colors.white }, --Popup menu: Thumb of the scrollbar.
   { hg = 'Question', fg = colors.purple }, --hit-enter prompt and yes/no questions
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-  { hg = 'SpecialKey', fg = colors.special_grey }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
+  { hg = 'SpecialKey', fg = colors.special }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
   { hg = 'SpellBad', fg = colors.red, gui = 'underline', cterm = 'underline' }, --Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
   { hg = 'SpellCap', fg = colors.dark_yellow }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
   { hg = 'StatusLine', fg = colors.white, bg = colors.black }, --status line of current window
-  { hg = 'StatusLineNC', fg = colors.comment_grey }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-  { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor_grey }, --status line of current :terminal window
-  { hg = 'StatusLineTermNC', fg = colors.comment_grey }, --status line of non-current  =terminal window
-  { hg = 'TabLine', fg = colors.comment_grey }, --tab pages line, not active tab page label
+  { hg = 'StatusLineNC', fg = colors.comment }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+  { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor }, --status line of current :terminal window
+  { hg = 'StatusLineTermNC', fg = colors.comment }, --status line of non-current  =terminal window
+  { hg = 'TabLine', fg = colors.comment }, --tab pages line, not active tab page label
   { hg = 'TabLineFill' }, --tab pages line, where there are no labels
   { hg = 'TabLineSel', fg = colors.white }, --tab pages line, active tab page label
   { hg = 'Terminal', fg = colors.white, bg = colors.black }, --terminal window (see terminal-size-color)
   { hg = 'Title', fg = colors.green }, --titles for output from " =set all", ":autocmd" etc.
-  { hg = 'Visual', bg = colors.cursor_grey }, --Visual mode selection
-  { hg = 'VisualNOS', bg = colors.cursor_grey }, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
+  { hg = 'Visual', bg = colors.cursor }, --Visual mode selection
+  { hg = 'VisualNOS', bg = colors.cursor }, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
   { hg = 'WarningMsg', fg = colors.yellow }, --warning messages
   { hg = 'WildMenu', fg = colors.black, bg = colors.blue }, --current match in 'wildmenu' completion
 
   -- Diagnostics
   { hg = 'DiagnosticError', fg = colors.error },
-  { hg = 'DiagnosticWarn', fg = colors.yellow },
-  { hg = 'DiagnosticInfo', fg = colors.blue },
+  { hg = 'DiagnosticWarn', fg = colors.warning },
+  { hg = 'DiagnosticInfo', fg = colors.note },
   { hg = 'DiagnosticHint', fg = colors.cyan },
   { hg = 'DiagnosticUnderlineError', fg = colors.error, gui = 'underline', cterm = 'underline' },
-  { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
-  { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineWarn', fg = colors.warning, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineInfo', fg = colors.note, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
 
   -- Neovim's built-in language server client
@@ -132,14 +130,14 @@ local highlights = {
   { hg = 'LspSignatureActiveParameter', fg=colors.yellow, gui='bold' },
 
   -- ... an exception for my favorite plugin
-  { hg = 'GitSignsAdd', fg = colors.green },
-  { hg = 'GitSignsChange', fg = colors.yellow },
-  { hg = 'GitSignsDelete', fg = colors.error },
+  { hg = 'GitSignsAdd', fg = colors.added },
+  { hg = 'GitSignsChange', fg = colors.changed },
+  { hg = 'GitSignsDelete', fg = colors.Deleted },
 
   { hg = 'TSConstructor', fg = colors.green },
-	{ hg = 'TSProperty', fg = colors.blue2 },
+	{ hg = 'TSProperty', fg = colors.blue },
   { hg = 'TSTypebuiltin', fg = colors.purple }, 
-  { hg = 'TSVariable', fg = colors.blue3 },
+  { hg = 'TSVariableBuilt', fg = colors.blue },
 }
 
 M.colorscheme = function()
