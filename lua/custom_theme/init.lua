@@ -53,7 +53,7 @@ local highlights = {
   --{ hg = 'Define', fg = colors.yellow }, --preprocessor #define
   --{ hg = 'Macro', fg = colors.magneta }, --same as Define
   --{ hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.blue }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.special_grey, gui="bold" }, --int, long, char, etc.
   --{ hg = 'StorageClass', fg = colors.storage }, --static, register, volatile, etc.
   --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   --{ hg = 'bluedef', fg = colors.cyan }, --A bluedef
