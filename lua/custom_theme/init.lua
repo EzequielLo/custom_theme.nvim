@@ -38,13 +38,13 @@ local highlights = {
   { hg = 'Number', fg = colors.magneta }, --a magneta constant: 234, 0xff
   { hg = 'Boolean', fg = colors.red_2 }, --a red_2 constant: TRUE, false
   { hg = 'Float', fg = colors.magneta }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.variable }, --any variable name
-  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
-  { hg = 'Statement', fg = colors.constant }, --any statement
+  { hg = 'Identifier', fg = colors.blue }, --any variable name
+  --{ hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
+  { hg = 'Statement', fg = colors.purple }, --any statement
   --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
   --{ hg = 'Label', fg = colors.red }, --case, default, etc.
-  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  --{ hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.purple }, --any other purple
   --{ hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   --{ hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
@@ -58,9 +58,9 @@ local highlights = {
   --{ hg = 'bluedef', fg = colors.cyan }, --A bluedef
   { hg = 'Special', fg = colors.foreground }, --any special symbol
   --{ hg = 'SpecialChar', fg = colors. }, --special character in a constant
-  { hg = 'Tag', fg = colors.tag }, --you can use CTRL-] on this
- { hg = 'Delimiter' }, --character that needs attention
-{ hg = 'SpecialComment', fg = colors.comment }, --special things inside a comment
+  { hg = 'Tag', fg = colors.purple}, --you can use CTRL-] on this
+  { hg = 'Delimiter' }, --character that needs attention
+  { hg = 'SpecialComment', fg = colors.comment }, --special things inside a comment
   { hg = 'Debug' }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
