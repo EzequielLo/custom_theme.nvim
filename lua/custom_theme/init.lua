@@ -19,7 +19,7 @@ tag = "#994cc3",
 tagAttribute = "#4876d6", -- italic
 functions =  "#4876d6",
 constant = "#4876d6",
-constantProperty = "#0c969b",
+property = "#0c969b",
 type = "#4876d6",
 boolean = "#bc5454",
 variableParameterFunction = "#0c969b",
@@ -40,8 +40,8 @@ local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
   { hg = 'Comment', fg = colors.comment, gui = 'italic', cterm = 'italic' }, -- any comment
   { hg = 'Constant', fg = colors.constant }, --any constant
-  { hg = 'String', fg = colors.string }, --a string constant: "this is a string"
-  { hg = 'Character', fg = colors.string }, --a character constant: 'c', '\n'
+  { hg = 'String', fg = colors.StringQuoted }, --a string constant: "this is a string"
+  { hg = 'Character', fg = colors.StringQuoted }, --a character constant: 'c', '\n'
   { hg = 'Number', fg = colors.number }, --a number constant: 234, 0xff
   { hg = 'Boolean', fg = colors.boolean }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.number }, --a floating point constant: 2.3e10
@@ -55,7 +55,7 @@ local highlights = {
   { hg = 'Keyword', fg = colors.keyword }, --any other keyword
   --{ hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   --{ hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
-  --{ hg = 'Include', fg = colors.purple }, --preprocessor #include
+  { hg = 'Include', fg = colors.keyword }, --preprocessor #include
   --{ hg = 'Define', fg = colors.dark_yellow }, --preprocessor #define
   --{ hg = 'Macro', fg = colors.magneta }, --same as Define
   --{ hg = 'PreCondit', fg = colors.dark_yellow }, --preprocessor #if, #else, #endif, etc.
