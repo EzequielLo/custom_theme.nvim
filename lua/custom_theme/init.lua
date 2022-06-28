@@ -19,13 +19,19 @@ local colors = {
   background = '#ffffff',
   comment_grey = '#505050',
   gutter_fg_grey = '#4B5263',
-	cursor_grey = "#f0f0f0",
-	visual_grey = "#505050",
-	menu_grey = "#d7d7d7",
-	special_grey = "#0a0a0a",
-	vertsplit = "#efefef",
+	cursor_grey = "#90A7B2",
+	visual_grey = "#403f53",
+	menu_grey = "#F0F0F0",
+	special_grey = "#403f53",
+	vertsplit = "#F0F0F0",
 
 }
+hi Comment guifg=#939dbb ctermfg=247 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
+hi Constant guifg=#4876d6 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Number guifg=#aa0982 ctermfg=126 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Boolean guifg=#bc5454 ctermfg=131 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
   { hg = 'Comment', fg = colors.comment_grey, gui = 'italic', cterm = 'italic' }, -- any comment
