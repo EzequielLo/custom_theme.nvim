@@ -26,11 +26,6 @@ local colors = {
 	vertsplit = "#F0F0F0",
 
 }
-hi Comment guifg=#939dbb ctermfg=247 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi Constant guifg=#4876d6 ctermfg=68 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Number guifg=#aa0982 ctermfg=126 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Boolean guifg=#bc5454 ctermfg=131 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-
 
 local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
