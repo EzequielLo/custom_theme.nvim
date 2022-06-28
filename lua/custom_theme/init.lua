@@ -47,7 +47,7 @@ local highlights = {
   { hg = 'Float', fg = colors.number }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.variable }, --any variable name
   { hg = 'Function', fg = colors.functions }, --function name (also: methods for classes)
-  { hg = 'Statement', fg = colors. }, --any statement
+  { hg = 'Statement', fg = colors.constant }, --any statement
   --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
   --{ hg = 'Label', fg = colors.red }, --case, default, etc.
