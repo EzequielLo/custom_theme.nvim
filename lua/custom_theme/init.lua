@@ -150,7 +150,7 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = c.bg, bg = c.error },
   { hg =  "TSConstructor" , fg = colors.foreground }, -- For constructor calls and definitions: `, }` in Lua, and Java constructors.
   --{ hg =  "TSConditional"       , };    -- For keywords related to conditionnals.
-  --{ hg =  "TSConstant" , fg = c.syntax.constant }, -- For constants
+  { hg =  "TSConstant" , fg = colors.black }, -- For constants
   --{ hg =  "commentTSConstant" , fg = c.syntax.keyword },
   { hg =  "TSConstBuiltin",fg =colors.blue };    -- For constant that are built in the language: `nil` in Lua.
   --{ hg =  "TSConstMacro"        , };    -- For constants that are defined by macros: `NULL` in C.
@@ -173,18 +173,18 @@ local highlights = {
   { hg =  "TSParameter" , fg = colors.foreground }, -- For parameters of a function.
   --{ hg =  "TSParameterReference", };    -- For references to parameters of a function.
   { hg =  "TSProperty" , fg = colors.green }, -- Same as `TSField`.
-  --{ hg =  "TSPunctDelimiter" , fg = c.fg }, -- For delimiters ie: `.`
+	{ hg =  "TSPunctDelimiter" , fg = colors.foreground}, -- For delimiters ie: `.`
   --{ hg =  "TSPunctBracket" , fg = c.fg }, -- For brackets and parens.
-  --{ hg =  "TSPunctSpecial" , fg = c.fg }, -- For special punctutation that does not fall in the catagories before.
+  { hg =  "TSPunctSpecial" , fg = colors.purple }, -- For special punctutation that does not fall in the catagories before.
   --{ hg =  "TSRepeat"            , };    -- For keywords related to loops.
   --{ hg =  "TSString"           , };    -- For strings.
   { hg =  "TSStringRegex" , fg = colors.blue_3 }, -- For regexes.
   --{ hg =  "TSStringEscape" , fg = c.red }, -- For escape characters within a string.
   -- TSSymbol            , };    -- For identifiers referring to symbols or atoms.
   --{ hg =  "TSType" , fg = c.syntax.keyword }, -- For types.
-  --{ hg =  "TSTypeBuiltin"       , };    -- For builtin types.
+  --{ hg =  "TSTypeBuiltin", fg = colors.green       , };    -- For builtin types.
   { hg =  "TSVariable" , fg = colors.blue}, -- Any variable name that does not have another highlight.
-  --{ hg =  "TSVariableBuiltin" , fg = c.syntax.variable }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
+  { hg =  "TSVariableBuiltin" , fg = colors.green }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
   --{ hg =  "TSTag" , fg = c.syntax.tag }, -- Tags like html tag names.
   --{ hg =  "TSTagDelimiter" , fg = c.fg }, -- Tag delimiter like `<` `>` `/`
   --{ hg =  "TSText"              , };    -- For strings considered text in a markup language.
