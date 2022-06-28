@@ -53,7 +53,7 @@ local highlights = {
   --{ hg = 'Define', fg = colors.yellow }, --preprocessor #define
   --{ hg = 'Macro', fg = colors.magneta }, --same as Define
   --{ hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.special_grey, gui="bold" }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.special_grey}, --int, long, char, etc.
   --{ hg = 'StorageClass', fg = colors.storage }, --static, register, volatile, etc.
   --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   --{ hg = 'bluedef', fg = colors.cyan }, --A bluedef
@@ -74,7 +74,7 @@ local highlights = {
   { hg = 'Cursor', fg = colors.black, bg = colors.cursor_grey }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
-  { hg = 'Directory', fg = colors.green }, --directory names (and other special names in listings)
+  { hg = 'Directory'}, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.purple, fg = colors.white }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
   { hg = 'DiffDelete', bg = colors.red, fg = colors.white }, --diff mode: Deleted line
