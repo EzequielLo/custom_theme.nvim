@@ -34,6 +34,8 @@ added = "#4876d6ff",
 background = "#FBFBFB",
 foreground = "#403f53",
 error = "#ff2c83",
+statusBarBackground" = "#F0F0F0",
+statusBarForeground" = "#403f53",
 }
 
 local highlights = {
@@ -51,7 +53,7 @@ local highlights = {
   --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
   --{ hg = 'Label', fg = colors.red }, --case, default, etc.
-  --{ hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  { hg = 'Operator', fg = colors.keyword }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.keyword }, --any other keyword
   --{ hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   --{ hg = 'PreProc', fg = colors.dark_yellow }, --generic Preprocessor
@@ -110,7 +112,7 @@ local highlights = {
   { hg = 'SpellCap'}, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal'}, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.dark_yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-  { hg = 'StatusLine'}, --status line of current window
+  { hg = 'StatusLine', fg= colors.statusBarForeground, bg = statusBarBackground}, --status line of current window
   { hg = 'StatusLineNC'}, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   { hg = 'StatusLineTerm'}, --status line of current :terminal window
   { hg = 'StatusLineTermNC'}, --status line of non-current  =terminal window
