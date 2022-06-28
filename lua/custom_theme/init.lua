@@ -5,8 +5,8 @@ local {
 { hg = "Normal" ,,bg=#000000 ,,fg=#ffffff, },
 
 { hg = "Visual", ,bg=#ffffff, ,fg=#000000, },
-{ hg = "Search" ,gui=underline, ,bg=#191a1b, ,fg=#ffffff, },
-{ hg = "IncSearch" ,gui=underline,,bg=#a8a8a8, ,fg=#000000, },
+{ hg = "Search" ,gui="underline", ,bg=#191a1b, ,fg=#ffffff, },
+{ hg = "IncSearch" ,gui="underline",,bg=#a8a8a8, ,fg=#000000, },
 
 { hg = "StatusLine" ,bg=#ffffff, ,fg=#000000, , },
 { hg = "StatusLineNC"  ,bg=#191a1b ,fg=#a8a8a8  },
@@ -98,7 +98,7 @@ local {
 { hg = "VimOption" ,fg=#4ae8fc },
 { hg = "VimGroup" ,fg=#4ae8fc },
 
-{ hg = "Underlined" ,gui=underline ,fg=#ffffff },
+{ hg = "Underlined" ,gui="underline" ,fg=#ffffff },
 { hg = "Ignore" ,bg=#191a1b ,fg=#a8a8a8 },
 { hg = "Conceal" ,bg=#a8a8a8 ,fg=#191a1b },
 
