@@ -10,6 +10,7 @@ green = "#0c969b",
 red_2 = "#bc5454",
 blue_2 = "#78ccf0",
 purple_2 = "#7986E7",
+blue_3 = "#5ca7e4"
 white = "#FBFBFB",
 black = "#403f53", 
 white = "#FBFBFB",
@@ -137,6 +138,72 @@ local highlights = {
   { hg = 'GitSignsAdd', fg = colors.purple },
   { hg = 'GitSignsChange', fg = colors.yellow },
   { hg = 'GitSignsDelete', fg = colors.red },
+
+	  -- Treesitter
+	--{ hg = "TSAnnotation"        , };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+  --{ hg =  "TSAttribute"         , };    -- (unstable) TODO: docs
+  --{ hg =  "TSBoolean"           , };    -- For booleans.
+  --{ hg =  "TSCharacter"         , };    -- For characters.
+  --{ hg =  "TSComment"           , };    -- For comment blocks.
+  --{ hg =  "TSNote" , fg = c.bg, bg = c.info },
+  --{ hg =  "TSWarning" , fg = c.bg, bg = c.warning },
+  --{ hg =  "TSDanger" , fg = c.bg, bg = c.error },
+  { hg =  "TSConstructor" , fg = colors.foreground }, -- For constructor calls and definitions: `, }` in Lua, and Java constructors.
+  --{ hg =  "TSConditional"       , };    -- For keywords related to conditionnals.
+  --{ hg =  "TSConstant" , fg = c.syntax.constant }, -- For constants
+  --{ hg =  "commentTSConstant" , fg = c.syntax.keyword },
+  { hg =  "TSConstBuiltin",fg =colors.blue };    -- For constant that are built in the language: `nil` in Lua.
+  --{ hg =  "TSConstMacro"        , };    -- For constants that are defined by macros: `NULL` in C.
+  --{ hg =  "TSError"             , };    -- For syntax/parser errors.
+  --{ hg =  "TSException"         , };    -- For exception related keywords.
+  --{ hg =  "TSField" , fg = c.fg }, -- For fields.
+  --{ hg =  "TSFloat"             , };    -- For floats.
+  --{ hg =  "TSFunction"          , };    -- For function (calls and definitions).
+  --{ hg =  "TSFuncBuiltin"       , };    -- For builtin functions: `table.insert` in Lua.
+  --{ hg =  "TSFuncMacro"         , };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+  --{ hg =  "TSInclude" , fg = c.syntax.keyword }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+  --{ hg =  "TSKeyword" , fg = c.syntax.keyword, style = cfg.keyword_style }, -- For keywords that don't fall in previous categories.
+  --{ hg =  "TSKeywordFunction" , fg = c.syntax.keyword, style = cfg.function_style }, -- For keywords used to define a fuction.
+  --{ hg =   "TSLabel" , fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+  --{ hg =  "TSMethod"            , };    -- For method calls and definitions.
+  --{ hg =  "TSNamespace" , fg = c.fg }, -- For identifiers referring to modules and namespaces.
+  --{ hg =  "TSNone"              , };    -- TODO: docs
+  --{ hg =  "TSNumber"            , };    -- For all numbers
+  --{ hg =  "TSOperator" , fg = c.syntax.keyword }, -- For any operator: `+`, but also `->` and `*` in C.
+  { hg =  "TSParameter" , fg = colors.foreground }, -- For parameters of a function.
+  --{ hg =  "TSParameterReference", };    -- For references to parameters of a function.
+  { hg =  "TSProperty" , fg = colors.cyan }, -- Same as `TSField`.
+  --{ hg =  "TSPunctDelimiter" , fg = c.fg }, -- For delimiters ie: `.`
+  --{ hg =  "TSPunctBracket" , fg = c.fg }, -- For brackets and parens.
+  --{ hg =  "TSPunctSpecial" , fg = c.fg }, -- For special punctutation that does not fall in the catagories before.
+  --{ hg =  "TSRepeat"            , };    -- For keywords related to loops.
+  --{ hg =  "TSString"           , };    -- For strings.
+  { hg =  "TSStringRegex" , fg = colors.blue_3 }, -- For regexes.
+  --{ hg =  "TSStringEscape" , fg = c.red }, -- For escape characters within a string.
+  -- TSSymbol            , };    -- For identifiers referring to symbols or atoms.
+  --{ hg =  "TSType" , fg = c.syntax.keyword }, -- For types.
+  --{ hg =  "TSTypeBuiltin"       , };    -- For builtin types.
+  { hg =  "TSVariable" , fg = colors.blue}, -- Any variable name that does not have another highlight.
+  --{ hg =  "TSVariableBuiltin" , fg = c.syntax.variable }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
+  --{ hg =  "TSTag" , fg = c.syntax.tag }, -- Tags like html tag names.
+  --{ hg =  "TSTagDelimiter" , fg = c.fg }, -- Tag delimiter like `<` `>` `/`
+  --{ hg =  "TSText"              , };    -- For strings considered text in a markup language.
+  --{ hg =  "TSTextReference" , fg = c.red }, -- FIXME
+  --{ hg =  "TSEmphasis"          , };    -- For text to be represented with emphasis.
+  --{ hg =  "TSUnderline"         , };    -- For text to be represented with an underline.
+  --{ hg =  "TSStrike"            , };    -- For strikethrough text.
+  --{ hg =  "TSTitle"   , }, -- Text that is part of a title.
+  --{ hg =  "TSLiteral" , };    -- Literal text.
+  --{ hg =  "TSURI"   , };    -- Any URI like a link or email.
+    -- CSS
+  --{ hg =  "cssTSProperty" , fg = c.syntax.func },
+  --{ hg =  "cssTSType" , fg = c.syntax.tag },
+    -- html
+  --{ hg =  "htmlTSConstant" , fg = c.syntax.tag },
+  --{ hg =  "htmlTag" , fg = c.fg },
+  --{ hg =  "htmlEndTag" , fg = c.fg },
+  --{ hg =  "htmlTagName" , fg = c.syntax.tag },
+  --{ hg =  "htmlArg" , fg = c.syntax.html_arg },
 }
 
 M.colorscheme = function()
