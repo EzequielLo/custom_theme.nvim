@@ -33,8 +33,6 @@ background = "#FBFBFB",
 foreground = "#403f53",
 statusBarBackground = "#F0F0F0",
 statusBarForeground = "#403f53",
-bracketMatch = "#d3e8f8",
-bracketMatchBorder = "#2AA298",
 red =  "#E64D49",
 yellow = "#daaa01",
 cyan = "#49d0c5",
@@ -88,14 +86,14 @@ local highlights = {
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
   { hg = 'ColorColumn', bg = colors.cursor_grey }, --used for the columns set with 'colorcolumn'
   { hg = 'Conceal' }, --placeholder characters substituted for concealed text (see 'conceallevel')
-  { hg = 'Cursor', fg = colors.black, bg = colors.blue }, --the character under the cursor
+  { hg = 'Cursor', fg = colors.black, bg = colors.cursor_grey }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
-  { hg = 'Directory', fg = colors.blue }, --directory names (and other special names in listings)
-  { hg = 'DiffAdd', bg = colors.keywordOperator, fg = colors.black }, --diff mode: Added line
+  { hg = 'Directory', fg = colors.number }, --directory names (and other special names in listings)
+  { hg = 'DiffAdd', bg = colors.keywordOperator, fg = colors.white }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
-  { hg = 'DiffDelete', bg = colors.red, fg = colors.black }, --diff mode: Deleted line
-  { hg = 'DiffText', bg = colors.yellow, fg = colors.black }, --diff mode: Changed text within a changed line
+  { hg = 'DiffDelete', bg = colors.red, fg = colors.white }, --diff mode: Deleted line
+  { hg = 'DiffText', bg = colors.yellow, fg = colors.white }, --diff mode: Changed text within a changed line
   { hg = 'ErrorMsg', fg = colors.red }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
   { hg = 'Folded', fg = colors.comment }, --line used for closed folds
@@ -109,7 +107,7 @@ local highlights = {
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.foreground, bg = colors.background }, --normal text
-  { hg = 'Pmenu', fg = colors.white, bg = colors.menu_grey }, --Popup menu: normal item.
+  { hg = 'Pmenu', fg = colors.black, bg = colors.menu_grey }, --Popup menu: normal item.
   { hg = 'PmenuSel', fg = colors.black, bg = colors.vertical_split }, --Popup menu: selected item.
   { hg = 'PmenuSbar', bg = colors.cursor_grey }, --Popup menu: scrollbar.
   { hg = 'PmenuThumb', bg = colors.black }, --Popup menu: Thumb of the scrollbar.
