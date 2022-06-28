@@ -2,37 +2,21 @@ local M = {}
 
 local colors = {
 comment = "#989fb1", --italic
-string = "#4876d6", --italic
-StringQuoted = "#c96765",
-constantMath = "#4876d6",
-number = "#aa0982",
-builtInConstant = "#4876d6",
-ConstantCharacterEscape = "#aa0982",
-RegExpString = "#5ca7e4", 
-variable = "#4876d6", 
-keyword = "#994cc3", --italic 
-KeywordOperator = "#0c969b",
-storage = "#994cc3", --italic
-Storagetype = "#994cc3", 
-FunctionName = "#994cc3", --italic
-tag = "#994cc3",
-tagAttribute = "#4876d6", -- italic
-functions =  "#4876d6",
-constant = "#4876d6",
-property = "#0c969b",
-type = "#4876d6",
-boolean = "#bc5454",
-variableParameterFunction = "#0c969b",
-method = "#4876d6",
-othervariables = "#78ccf0",
-Parameter = "#7986E7",
+red_1 = "#c96765",
+blue= "#4876d6",
+magneta = "#aa0982",  
+purple = "#994cc3", --italic 
+green = "#0c969b",
+red_2 = "#bc5454",
+blue_2 = "#78ccf0",
+purple_2 = "#7986E7",
+white = "#FBFBFB",
+black = "#403f53", 
 white = "#FBFBFB",
 black = "#403f53", 
 -- UI
 background = "#FBFBFB",
 foreground = "#403f53",
-statusBarBackground = "#F0F0F0",
-statusBarForeground = "#403f53",
 red =  "#E64D49",
 yellow = "#daaa01",
 cyan = "#49d0c5",
@@ -49,29 +33,29 @@ local highlights = {
   -- Syntax Groups (descriptions and ordering from `:h w18`)
   { hg = 'Comment', fg = colors.comment, gui = 'italic', cterm = 'italic' }, -- any comment
   { hg = 'Constant', fg = colors.constant }, --any constant
-  { hg = 'String', fg = colors.StringQuoted }, --a string constant: "this is a string"
-  { hg = 'Character', fg = colors.StringQuoted }, --a character constant: 'c', '\n'
-  { hg = 'Number', fg = colors.number }, --a number constant: 234, 0xff
-  { hg = 'Boolean', fg = colors.boolean }, --a boolean constant: TRUE, false
-  { hg = 'Float', fg = colors.number }, --a floating point constant: 2.3e10
+  { hg = 'String', fg = colors.red_1 }, --a red_1 constant: "this is a red_1"
+  { hg = 'Character', fg = colors.red_1 }, --a character constant: 'c', '\n'
+  { hg = 'Number', fg = colors.magneta }, --a magneta constant: 234, 0xff
+  { hg = 'Boolean', fg = colors.red_2 }, --a red_2 constant: TRUE, false
+  { hg = 'Float', fg = colors.magneta }, --a floating point constant: 2.3e10
   { hg = 'Identifier', fg = colors.variable }, --any variable name
-  { hg = 'Function', fg = colors.functions }, --function name (also: methods for classes)
+  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.constant }, --any statement
-  --{ hg = 'Conditional', fg = colors.keyword }, --if, then, else, endif, switch, etc.
+  --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
   --{ hg = 'Label', fg = colors.red }, --case, default, etc.
-  { hg = 'Operator', fg = colors.keyword }, --sizeof", "+", "*", etc.
-  { hg = 'Keyword', fg = colors.keyword }, --any other keyword
+  { hg = 'Operator', fg = colors.purple }, --sizeof", "+", "*", etc.
+  { hg = 'Keyword', fg = colors.purple }, --any other purple
   --{ hg = 'Exception', fg = colors.yellow }, --try, catch, throw
   --{ hg = 'PreProc', fg = colors.yellow }, --generic Preprocessor
-  { hg = 'Include', fg = colors.keyword }, --preprocessor #include
+  { hg = 'Include', fg = colors.purple }, --preprocessor #include
   --{ hg = 'Define', fg = colors.yellow }, --preprocessor #define
   --{ hg = 'Macro', fg = colors.magneta }, --same as Define
   --{ hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.type }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.blue }, --int, long, char, etc.
   --{ hg = 'StorageClass', fg = colors.storage }, --static, register, volatile, etc.
   --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
-  --{ hg = 'Typedef', fg = colors.cyan }, --A typedef
+  --{ hg = 'bluedef', fg = colors.cyan }, --A bluedef
   { hg = 'Special', fg = colors.foreground }, --any special symbol
   --{ hg = 'SpecialChar', fg = colors. }, --special character in a constant
   { hg = 'Tag', fg = colors.tag }, --you can use CTRL-] on this
@@ -81,7 +65,7 @@ local highlights = {
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore' }, --left blank, hidden
   { hg = 'Error', fg = colors.red }, --any erroneous construct
-  { hg = 'Todo', fg = colors.keyword }, --anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+  { hg = 'Todo', fg = colors.purple }, --anything that needs extra attention; mostly the purples TODO FIXME and XXX
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
   { hg = 'ColorColumn', bg = colors.cursor_grey }, --used for the columns set with 'colorcolumn'
@@ -89,8 +73,8 @@ local highlights = {
   { hg = 'Cursor', fg = colors.black, bg = colors.cursor_grey }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
-  { hg = 'Directory', fg = colors.number }, --directory names (and other special names in listings)
-  { hg = 'DiffAdd', bg = colors.keywordOperator, fg = colors.white }, --diff mode: Added line
+  { hg = 'Directory', fg = colors.magneta }, --directory names (and other special names in listings)
+  { hg = 'DiffAdd', bg = colors.purple, fg = colors.white }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
   { hg = 'DiffDelete', bg = colors.red, fg = colors.white }, --diff mode: Deleted line
   { hg = 'DiffText', bg = colors.yellow, fg = colors.white }, --diff mode: Changed text within a changed line
@@ -100,8 +84,8 @@ local highlights = {
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
-  { hg = 'LineNr', fg = colors.cursor_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-  { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+  { hg = 'LineNr', fg = colors.cursor_grey }, --Line magneta for " =magneta" and ":#" commands, and when 'magneta' or 'relativemagneta' option is set.
+  { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativemagneta' is set for the cursor line.
   { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
   { hg = 'MoreMsg' }, --more-prompt
@@ -111,7 +95,7 @@ local highlights = {
   { hg = 'PmenuSel', fg = colors.white, bg = colors.cursos_grey }, --Popup menu: selected item.
   { hg = 'PmenuSbar', bg = colors.cursor_grey }, --Popup menu: scrollbar.
   { hg = 'PmenuThumb', bg = colors.black }, --Popup menu: Thumb of the scrollbar.
-  { hg = 'Question', fg = colors.keyword }, --hit-enter prompt and yes/no questions
+  { hg = 'Question', fg = colors.purple }, --hit-enter prompt and yes/no questions
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
   { hg = 'SpecialKey', fg = colors.special_grey }, --Meta and special keys listed with " =map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
@@ -127,7 +111,7 @@ local highlights = {
   { hg = 'TabLineFill' }, --tab pages line, where there are no labels
   { hg = 'TabLineSel', fg = colors.white }, --tab pages line, active tab page label
   { hg = 'Terminal', fg = colors.white, bg = colors.black }, --terminal window (see terminal-size-color)
-  { hg = 'Title', fg = colors.keywordOperator }, --titles for output from " =set all", ":autocmd" etc.
+  { hg = 'Title', fg = colors.purple }, --titles for output from " =set all", ":autocmd" etc.
   { hg = 'Visual', bg = colors.visual_grey }, --Visual mode selection
   { hg = 'VisualNOS', bg = colors.visual_grey }, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
   { hg = 'WarningMsg', fg = colors.yellow }, --warning messages
@@ -150,7 +134,7 @@ local highlights = {
   { hg = 'LspSignatureActiveParameter', fg=colors.yellow, gui='bold' },
 
   -- ... an exception for my favorite plugin
-  { hg = 'GitSignsAdd', fg = colors.keywordOperator },
+  { hg = 'GitSignsAdd', fg = colors.purple },
   { hg = 'GitSignsChange', fg = colors.yellow },
   { hg = 'GitSignsDelete', fg = colors.red },
 }
@@ -159,7 +143,7 @@ M.colorscheme = function()
   local highlight_cmds = {}
   for idx = 1, #highlights do
     local highlight = highlights[idx]
-    highlight_cmds[idx] = string.format(
+    highlight_cmds[idx] = red_1.format(
       'highlight %s guifg=%s guibg=%s gui=%s guisp=%s',
       highlight.hg,
       highlight.fg or 'NONE',
