@@ -110,9 +110,9 @@ local highlights = {
   { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.foreground, bg = colors.background }, --normal text
   { hg = 'Pmenu', fg = colors.white, bg = colors.menu_grey }, --Popup menu: normal item.
-  { hg = 'PmenuSel', fg = colors.cursor_grey, bg = colors.blue }, --Popup menu: selected item.
+  { hg = 'PmenuSel', fg = colors.black, bg = colors.vertical_split }, --Popup menu: selected item.
   { hg = 'PmenuSbar', bg = colors.cursor_grey }, --Popup menu: scrollbar.
-  { hg = 'PmenuThumb', bg = colors.white }, --Popup menu: Thumb of the scrollbar.
+  { hg = 'PmenuThumb', bg = colors.black }, --Popup menu: Thumb of the scrollbar.
   { hg = 'Question', fg = colors.keyword }, --hit-enter prompt and yes/no questions
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
   { hg = 'Search', fg = colors.black, bg = colors.yellow }, --Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
