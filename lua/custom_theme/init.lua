@@ -143,7 +143,7 @@ M.colorscheme = function()
   local highlight_cmds = {}
   for idx = 1, #highlights do
     local highlight = highlights[idx]
-    highlight_cmds[idx] = red_1.format(
+    highlight_cmds[idx] = string.format(
       'highlight %s guifg=%s guibg=%s gui=%s guisp=%s',
       highlight.hg,
       highlight.fg or 'NONE',
