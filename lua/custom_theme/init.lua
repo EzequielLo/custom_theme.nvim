@@ -74,7 +74,7 @@ local highlights = {
   { hg = 'Cursor', fg = colors.black, bg = colors.cursor_grey }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.cursor_grey }, --the screen line that the cursor is in when 'cursorline' is set
-  { hg = 'Directory', fg = colors.magneta }, --directory names (and other special names in listings)
+  { hg = 'Directory', fg = colors.green }, --directory names (and other special names in listings)
   { hg = 'DiffAdd', bg = colors.purple, fg = colors.white }, --diff mode: Added line
   { hg = 'DiffChange', fg = colors.yellow, gui = 'underline', cterm = 'underline' }, --diff mode: Changed line
   { hg = 'DiffDelete', bg = colors.red, fg = colors.white }, --diff mode: Deleted line
@@ -122,11 +122,11 @@ local highlights = {
   { hg = 'DiagnosticError', fg = colors.red },
   { hg = 'DiagnosticWarn', fg = colors.yellow },
   { hg = 'DiagnosticInfo', fg = colors.blue },
-  { hg = 'DiagnosticHint', fg = colors.cyan },
+  { hg = 'DiagnosticHint', fg = colors.green },
   { hg = 'DiagnosticUnderlineError', fg = colors.red, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineWarn', fg = colors.yellow, gui = 'underline', cterm = 'underline' },
   { hg = 'DiagnosticUnderlineInfo', fg = colors.blue, gui = 'underline', cterm = 'underline' },
-  { hg = 'DiagnosticUnderlineHint', fg = colors.cyan, gui = 'underline', cterm = 'underline' },
+  { hg = 'DiagnosticUnderlineHint', fg = colors.green, gui = 'underline', cterm = 'underline' },
 
   -- Neovim's built-in language server client
   { hg = 'LspReferenceWrite', fg = colors.blue, gui='underline' },
