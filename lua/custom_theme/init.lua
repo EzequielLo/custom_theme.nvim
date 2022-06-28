@@ -84,14 +84,14 @@ local highlights = {
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment_grey }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
   { hg = 'LineNr', fg = colors.gutter_fg_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-  { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
+  { hg = 'MatchParen', fg = colors.green, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
   { hg = 'MoreMsg' }, --more-prompt
   { hg = 'NonText', fg = colors.special_grey }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
   { hg = 'Normal', fg = colors.foreground, bg = colors.background }, --normal text
   { hg = 'Pmenu', fg = colors.black, bg = colors.menu_grey }, --Popup menu: normal item.
-  { hg = 'PmenuSel', fg = colors.cursor_grey, bg = colors.blue }, --Popup menu: selected item.
-  { hg = 'PmenuSbar', bg = colors.cursor_grey }, --Popup menu: scrollbar.
+  { hg = 'PmenuSel', fg = colors.white, bg = colors.visual_grey }, --Popup menu: selected item.
+  { hg = 'PmenuSbar', bg = colors.white }, --Popup menu: scrollbar.
   { hg = 'PmenuThumb', bg = colors.white }, --Popup menu: Thumb of the scrollbar.
   { hg = 'Question', fg = colors.purple }, --hit-enter prompt and yes/no questions
   { hg = 'QuickFixLine', fg = colors.black, bg = colors.yellow }, --Current quickfix item in the quickfix window.
