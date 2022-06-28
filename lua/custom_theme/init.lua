@@ -183,7 +183,7 @@ local highlights = {
   -- TSSymbol            , };    -- For identifiers referring to symbols or atoms.
   --{ hg =  "TSType" , fg = c.syntax.keyword }, -- For types.
   --{ hg =  "TSTypeBuiltin", fg = colors.green       , };    -- For builtin types.
-  { hg =  "TSVariable" , fg = colors.blue}, -- Any variable name that does not have another highlight.
+  { hg =  "TSVariable" , fg = colors.foreground}, -- Any variable name that does not have another highlight.
   { hg =  "TSVariableBuiltin" , fg = colors.green }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
   --{ hg =  "TSTag" , fg = c.syntax.tag }, -- Tags like html tag names.
   --{ hg =  "TSTagDelimiter" , fg = c.fg }, -- Tag delimiter like `<` `>` `/`
