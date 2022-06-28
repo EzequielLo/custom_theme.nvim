@@ -102,7 +102,7 @@ local highlights = {
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
-  { hg = 'LineNr', fg = colors.special_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  { hg = 'LineNr', fg = colors.cursor_grey }, --Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   { hg = 'CursorLineNr' }, --Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
   { hg = 'MatchParen', fg = colors.blue, gui = 'underline', cterm = 'underline' }, --The character under the cursor or just before it, if it is a paired bracket, and its match.
   { hg = 'ModeMsg' }, --'showmode' message (e.g., "-- INSERT --")
@@ -121,9 +121,9 @@ local highlights = {
   { hg = 'SpellCap', fg = colors.yellow }, --Word that should start with a capital. This will be combined with the highlighting used otherwise.
   { hg = 'SpellLocal', fg = colors.yellow }, --Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
   { hg = 'SpellRare', fg = colors.yellow }, --Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-  { hg = 'StatusLine', fg = colors.white, bg = colors.cursor_grey }, --status line of current window
+  { hg = 'StatusLine', fg = colors.white, bg = colors.black }, --status line of current window
   { hg = 'StatusLineNC', fg = colors.comment }, --status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-  { hg = 'StatusLineTerm', fg = colors.white, bg = colors.cursor_grey }, --status line of current :terminal window
+  { hg = 'StatusLineTerm', fg = colors.white, bg = colors.black }, --status line of current :terminal window
   { hg = 'StatusLineTermNC', fg = colors.comment }, --status line of non-current  =terminal window
   { hg = 'TabLine', fg = colors.comment }, --tab pages line, not active tab page label
   { hg = 'TabLineFill' }, --tab pages line, where there are no labels
