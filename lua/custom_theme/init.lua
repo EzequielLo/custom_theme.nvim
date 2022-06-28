@@ -63,7 +63,7 @@ local highlights = {
   --{ hg = 'StorageClass', fg = colors.storage }, --static, register, volatile, etc.
   --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   --{ hg = 'Typedef', fg = colors.cyan }, --A typedef
-  { hg = 'Special', fg = colors.othervariables }, --any special symbol
+  { hg = 'Special', fg = colors.foreground }, --any special symbol
   --{ hg = 'SpecialChar', fg = colors. }, --special character in a constant
   { hg = 'Tag', fg = colors.tag }, --you can use CTRL-] on this
   { hg = 'Delimiter' }, --character that needs attention
