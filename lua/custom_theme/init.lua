@@ -81,7 +81,7 @@ local highlights = {
   { hg = 'DiffText', bg = colors.yellow, fg = colors.white }, --diff mode: Changed text within a changed line
   { hg = 'ErrorMsg', fg = colors.red }, --error messages on the command line
   { hg = 'VertSplit', fg = colors.vertsplit }, --the column separating vertically split windows
-  { hg = 'Folded', fg = colors.comment }, --line used for closed folds
+  { hg = 'Folded'}, --line used for closed folds
   { hg = 'FoldColumn' }, --'foldcolumn'
   { hg = 'SignColumn' }, --column where signs are displayed
   { hg = 'IncSearch', fg = colors.yellow, bg = colors.comment }, --'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -165,7 +165,7 @@ local highlights = {
   --{ hg =  "TSKeyword" , fg = c.syntax.keyword, style = cfg.keyword_style }, -- For keywords that don't fall in previous categories.
   --{ hg =  "TSKeywordFunction" , fg = c.syntax.keyword, style = cfg.function_style }, -- For keywords used to define a fuction.
   --{ hg =   "TSLabel" , fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
-  --{ hg =  "TSMethod"            , };    -- For method calls and definitions.
+  { hg =  "TSMethod", fg=colors.blue };    -- For method calls and definitions.
   --{ hg =  "TSNamespace" , fg = c.fg }, -- For identifiers referring to modules and namespaces.
   --{ hg =  "TSNone"              , };    -- TODO: docs
   --{ hg =  "TSNumber"            , };    -- For all numbers
@@ -183,7 +183,7 @@ local highlights = {
   -- TSSymbol            , };    -- For identifiers referring to symbols or atoms.
   --{ hg =  "TSType" , fg = c.syntax.keyword }, -- For types.
   { hg =  "TSTypeBuiltin", fg = colors.blue, gui="italic"};    -- For builtin types.
-  { hg =  "TSVariable" , fg = colors.blue}, -- Any variable name that does not have another highlight.
+  { hg =  "TSVariable" , fg = colors.foreground}, -- Any variable name that does not have another highlight.
   { hg =  "TSVariableBuiltin" , fg = colors.green }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
   --{ hg =  "TSTag" , fg = c.syntax.tag }, -- Tags like html tag names.
   --{ hg =  "TSTagDelimiter" , fg = c.fg }, -- Tag delimiter like `<` `>` `/`
