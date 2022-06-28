@@ -53,7 +53,7 @@ local highlights = {
   --{ hg = 'Define', fg = colors.yellow }, --preprocessor #define
   --{ hg = 'Macro', fg = colors.magneta }, --same as Define
   --{ hg = 'PreCondit', fg = colors.yellow }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.foreground }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.blue }, --int, long, char, etc.
   --{ hg = 'StorageClass', fg = colors.storage }, --static, register, volatile, etc.
   --{ hg = 'Structure', fg = colors.blue3 }, --struct, union, enum, etc.
   --{ hg = 'bluedef', fg = colors.cyan }, --A bluedef
@@ -150,7 +150,7 @@ local highlights = {
   --{ hg =  "TSDanger" , fg = c.bg, bg = c.error },
   { hg =  "TSConstructor" , fg = colors.foreground }, -- For constructor calls and definitions: `, }` in Lua, and Java constructors.
   --{ hg =  "TSConditional"       , };    -- For keywords related to conditionnals.
-  { hg =  "TSConstant" , fg = colors.black }, -- For constants
+ -- { hg =  "TSConstant" , fg = colors.foreground }, -- For constants
   --{ hg =  "commentTSConstant" , fg = c.syntax.keyword },
   { hg =  "TSConstBuiltin",fg =colors.blue };    -- For constant that are built in the language: `nil` in Lua.
   --{ hg =  "TSConstMacro"        , };    -- For constants that are defined by macros: `NULL` in C.
@@ -170,7 +170,7 @@ local highlights = {
   --{ hg =  "TSNone"              , };    -- TODO: docs
   --{ hg =  "TSNumber"            , };    -- For all numbers
   --{ hg =  "TSOperator" , fg = c.syntax.keyword }, -- For any operator: `+`, but also `->` and `*` in C.
-  { hg =  "TSParameter" , fg = colors.special_grey }, -- For parameters of a function.
+  { hg =  "TSParameter" , fg = colors.foreground }, -- For parameters of a function.
   --{ hg =  "TSParameterReference", };    -- For references to parameters of a function.
   { hg =  "TSProperty" , fg = colors.green }, -- Same as `TSField`.
 	{ hg =  "TSPunctDelimiter" , fg = colors.foreground}, -- For delimiters ie: `.`
@@ -182,7 +182,7 @@ local highlights = {
   --{ hg =  "TSStringEscape" , fg = c.red }, -- For escape characters within a string.
   -- TSSymbol            , };    -- For identifiers referring to symbols or atoms.
   --{ hg =  "TSType" , fg = c.syntax.keyword }, -- For types.
-  { hg =  "TSTypeBuiltin", fg = colors.blue};    -- For builtin types.
+  { hg =  "TSTypeBuiltin", fg = colors.blue, gui="italic"};    -- For builtin types.
   { hg =  "TSVariable" , fg = colors.blue}, -- Any variable name that does not have another highlight.
   { hg =  "TSVariableBuiltin" , fg = colors.green }, -- Variable names that are { hg =defined by the languages, like `this` or `self`.
   --{ hg =  "TSTag" , fg = c.syntax.tag }, -- Tags like html tag names.
