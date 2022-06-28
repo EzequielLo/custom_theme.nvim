@@ -34,8 +34,8 @@ added = "#4876d6ff",
 background = "#FBFBFB",
 foreground = "#403f53",
 error = "#ff2c83",
-statusBarBackground" = "#F0F0F0",
-statusBarForeground" = "#403f53",
+statusBarBackground = "#F0F0F0",
+statusBarForeground = "#403f53",
 }
 
 local highlights = {
