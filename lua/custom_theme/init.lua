@@ -39,8 +39,8 @@ local highlights = {
   { hg = 'Number', fg = colors.magneta }, --a magneta constant: 234, 0xff
   { hg = 'Boolean', fg = colors.red_2 }, --a red_2 constant: TRUE, false
   { hg = 'Float', fg = colors.magneta }, --a floating point constant: 2.3e10
-  { hg = 'Identifier', fg = colors.blue }, --any variable name
-  --{ hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
+  { hg = 'Identifier', fg = colors.foreground }, --any variable name
+  { hg = 'Function', fg = colors.blue }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.purple }, --any statement
   --{ hg = 'Conditional', fg = colors.purple }, --if, then, else, endif, switch, etc.
   --{ hg = 'Repeat', fg = colors.p }, --for, do, while, etc.
@@ -172,7 +172,7 @@ local highlights = {
   --{ hg =  "TSOperator" , fg = c.syntax.keyword }, -- For any operator: `+`, but also `->` and `*` in C.
   { hg =  "TSParameter" , fg = colors.foreground }, -- For parameters of a function.
   --{ hg =  "TSParameterReference", };    -- For references to parameters of a function.
-  { hg =  "TSProperty" , fg = colors.cyan }, -- Same as `TSField`.
+  { hg =  "TSProperty" , fg = colors.green }, -- Same as `TSField`.
   --{ hg =  "TSPunctDelimiter" , fg = c.fg }, -- For delimiters ie: `.`
   --{ hg =  "TSPunctBracket" , fg = c.fg }, -- For brackets and parens.
   --{ hg =  "TSPunctSpecial" , fg = c.fg }, -- For special punctutation that does not fall in the catagories before.
