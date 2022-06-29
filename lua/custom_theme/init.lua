@@ -72,8 +72,6 @@ ToolBarButtonBg ="#505050",
 ToolBarButtonFg ="#ffffff", 
 WildMenuBg      ="#ffffff", 
 WildMenuFg      ="#000000", 
-TerminalBg      ="#ffffff", 
-WildMenuFg      ="#000000", 
 LineNrBg        ="#f0f0f0", 
 LineNrFg        ="#505050",
 CursorBg        ="#000000", 
@@ -104,7 +102,7 @@ ModeMsgFg       ="#005e00" ,
 IgnoreBg        ="#f0f0f0", 
 IgnoreFg        ="#505050" ,
 ConcealBg       ="#505050" ,
-ConselFg        ="#f0f0f0" ,
+ConcealFg        ="#f0f0f0" ,
 SpellBadFg      ="#a60000",  
 SpellCapFg      ="#813e00" ,
 SpellRareFg     ="#5317ac" ,
@@ -158,7 +156,7 @@ local highlights = {
 
   -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
   { hg = 'ColorColumn', bg = colors.ColorColumnBg}, --used for the columns set with 'colorcolumn'
-  { hg = 'Conceal', fg = colors.ConselFg, bg = colors.ConselBg }, --placeholder characters substituted for concealed text (see 'conceallevel')
+  { hg = 'Conceal', fg = colors.ConcealFg, bg = colors.ConcealBg }, --placeholder characters substituted for concealed text (see 'conceallevel')
   { hg = 'Cursor', fg = colors.CursorFg, bg = colors.CursorBg }, --the character under the cursor
   { hg = 'CursorIM' }, --like Cursor, but used when in IME mode
   { hg = 'CursorLine', bg = colors.CursorLineBg }, --the screen line that the cursor is in when 'cursorline' is set
@@ -201,7 +199,7 @@ local highlights = {
   { hg = 'TabLineSel', fg = colors.TabLineSefg }, --tab pages line, active tab page label
   { hg = 'Terminal', fg = colors.NormalFg, bg = colors.NormalBg}, --terminal window (see terminal-size-color)
   { hg = 'Title', fg = colors.Title}, --titles for output from " =set all", ":autocmd" etc.
-  { hg = 'Visual', bg = colors.VisualBg }, --Visual mode selection
+  { hg = 'Visual', bg = colors.VisualBg, fg=colors.VisualFg }, --Visual mode selection
   { hg = 'VisualNOS'}, --Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
   { hg = 'WarningMsg', fg = colors.WarningMsg }, --warning messages
   { hg = 'WildMenu', fg = colors.WildMenuFg, bg = colors.WildMenuBg }, --current match in 'wildmenu' completion
