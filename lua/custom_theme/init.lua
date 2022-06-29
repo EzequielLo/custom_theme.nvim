@@ -139,10 +139,10 @@ local highlights = {
   { hg = 'Define', fg = colors.Define }, --preprocessor #define
   { hg = 'Macro', fg = colors.Macro }, --same as Define
   { hg = 'PreCondit', fg = colors.PreCondit }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.Type,gui="bold" }, --int, long, char, etc.
+  { hg = 'Type', fg = colors.Type,gui="italic" }, --int, long, char, etc.
   { hg = 'StorageClass', fg = colors.StorageClass}, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.Structure }, --struct, union, enum, etc.
-  { hg = 'Typedef', fg = colors.Typedef, gui="italic" }, --A typedef
+  { hg = 'Typedef', fg = colors.Typedef }, --A typedef
   { hg = 'Special', fg = colors.Special }, --any special symbol
   { hg = 'SpecialChar', fg = colors.SpecialChar }, --special character in a constant
   { hg = 'Tag', fg = colors.Tag }, --you can use CTRL-] on this
