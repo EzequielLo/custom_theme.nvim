@@ -121,7 +121,7 @@ local highlights = {
   { hg = 'Comment', fg = colors.comment, gui = 'italic', cterm = 'italic' }, -- any comment
   { hg = 'Constant', fg = colors.Constant }, --any constant
   { hg = 'String', fg = colors.String }, --a string constant: "this is a string"
-  { hg = 'Character', fg = colors.Character }, --a character constant: 'c', '\n'
+  { hg = 'Character', fg = colors.Character, gui="bold" }, --a character constant: 'c', '\n'
   { hg = 'Number', fg = colors.Number }, --a number constant: 234, 0xff
   { hg = 'Boolean', fg = colors.Boolean }, --a boolean constant: TRUE, false
   { hg = 'Float', fg = colors.Float }, --a floating point constant: 2.3e10
@@ -129,25 +129,25 @@ local highlights = {
   { hg = 'Function', fg = colors.Function }, --function name (also: methods for classes)
   { hg = 'Statement', fg = colors.Statement }, --any statement
   { hg = 'Conditional', fg = colors.Conditional }, --if, then, else, endif, switch, etc.
-  { hg = 'Repeat', fg = colors.Repeat }, --for, do, while, etc.
+  { hg = 'Repeat', fg = colors.Repeat, gui="bold" }, --for, do, while, etc.
   { hg = 'Label', fg = colors.Label }, --case, default, etc.
   { hg = 'Operator', fg = colors.Operator }, --sizeof", "+", "*", etc.
   { hg = 'Keyword', fg = colors.Keyword }, --any other keyword
-  { hg = 'Exception', fg = colors.Exception }, --try, catch, throw
+  { hg = 'Exception', fg = colors.Exception, gui="bold" }, --try, catch, throw
   { hg = 'PreProc', fg = colors.PreProc }, --generic Preprocessor
   { hg = 'Include', fg = colors.Include }, --preprocessor #include
   { hg = 'Define', fg = colors.Define }, --preprocessor #define
-  { hg = 'Macro', fg = colors.Macro }, --same as Define
-  { hg = 'PreCondit', fg = colors.PreCondit }, --preprocessor #if, #else, #endif, etc.
-  { hg = 'Type', fg = colors.Type,gui="italic" }, --int, long, char, etc.
+  { hg = 'Macro', fg = colors.Macro, gui="bold" }, --same as Define
+  { hg = 'PreCondit', fg = colors.PreCondit, gui="bold" }, --preprocessor #if, #else, #endif, etc.
+  { hg = 'Type', fg = colors.Type,gui="bold" }, --int, long, char, etc.
   { hg = 'StorageClass', fg = colors.StorageClass}, --static, register, volatile, etc.
   { hg = 'Structure', fg = colors.Structure }, --struct, union, enum, etc.
-  { hg = 'Typedef', fg = colors.Typedef }, --A typedef
+  { hg = 'Typedef', fg = colors.Typedef, gui="bold" }, --A typedef
   { hg = 'Special', fg = colors.Special }, --any special symbol
   { hg = 'SpecialChar', fg = colors.SpecialChar }, --special character in a constant
   { hg = 'Tag', fg = colors.Tag }, --you can use CTRL-] on this
   { hg = 'Delimiter', fg = colors.Delimiter }, --character that needs attention
-  { hg = 'SpecialComment', fg = colors.comment }, --special things inside a comment
+  { hg = 'SpecialComment', fg = colors.comment, gui="bold" }, --special things inside a comment
   { hg = 'Debug', fg = colors.Debug }, --debugging statements
   { hg = 'Underlined', gui = 'underline', cterm = 'underline' }, --text that stands out, HTML links
   { hg = 'Ignore', fg = colors.Ignore }, --left blank, hidden
