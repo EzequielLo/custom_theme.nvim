@@ -118,7 +118,7 @@ PmenuThumbBg    ="#505050" ,
 local highlights = {
 
   -- Syntax Groups (descriptions and ordering from `:h w18`)
-  { hg = 'Comment', fg = colors.comment, gui = 'italic', cterm = 'italic' }, -- any comment
+  { hg = 'Comment', fg = colors.Comment, gui = 'italic', cterm = 'italic' }, -- any comment
   { hg = 'Constant', fg = colors.Constant }, --any constant
   { hg = 'String', fg = colors.String }, --a string constant: "this is a string"
   { hg = 'Character', fg = colors.Character, gui="bold" }, --a character constant: 'c', '\n'
