@@ -1,10 +1,10 @@
 local M = {}
 
 local colors = {
-red            ="#a60000",
-blue           ="#0031a9",
-yellow         ="#813e00",
-green          ="#005e00",
+red            ="#8a0000"",
+blue           ="#0030b4 ",
+yellow         ="#604F0F",
+green          ="#702d1f",
 --constructor
 Comment        ="#505050",
 Constant       ="#0000c0" ,
